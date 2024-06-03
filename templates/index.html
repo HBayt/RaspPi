@@ -1,0 +1,104 @@
+{% extends "navs_session.html" %} 
+{% block content %}
+
+<!-- 
+    DEBUT DE L'INSERTION DU CONTENU DU FICHIER navs.html 
+    L'nsertion du contenu du fichier navs.html contient 
+        - les balises de la structure de base d'un fichier HTML (<head>)
+        - l'en-tête et les déclarations d'un fichier HTML (<header>)
+        - la barre de navigation (<nav>)
+        - la barre de pied de page (<footer>) 
+-->
+
+
+
+<div class="container-xl mb-6">
+    <div >
+        <h3> Sessions HTTP côté client (avec cookies) </h3>     
+    </div>  
+        <!-- 
+            <div class="container">           
+
+                {% if session['nom_utilisateur']%}
+                    <h1> Bonjour {{ session['nom_utilisateur'] | title}} ! </h1> 
+                    <p>Bienvenue sur notre site ! <p>
+                {% else %}
+                    <h1> Bonjour! </h1> 
+                    <p>Bonjour invité, et bienvenue sur notre site ! <p>
+                {% endif %}
+            </div>  
+        --> 
+
+    <div class="container">
+        <!-- Paragraphe 1 
+          <h1> Bonjour {{ session['nom_utilisateur'] | title if session['nom_utilisateur'] else 'invité'}} ! </h1>       
+        
+        --> 
+        <h1> Bonjour {{ session['session_user'] | title if session['session_user'] else 'invité'}} ! </h1>     
+        <p>Bienvenue sur notre site ! <p>
+    </div>  
+
+    
+    <div class="container">
+        <p>
+            Vous avez hâte de commencer ? Cette page donne une bonne introduction aux sessions Flask. Suivez le pour mettre en place un projet avec le Framwork Flask. 
+        </p>
+
+    
+        <p><strong> Tutoriels de référence</strong><br>
+            <ul>
+                <li>Tutoriel YouTube <a href="https://www.youtube.com/watch?v=QAhZ8nmmYxw&t=4s">  Flask | Les sessions pour mémoriser des informations</a> (Numérique et Informatique à Mounier)  </li>
+                <li><a href="https://flask.palletsprojects.com/en/2.3.x/quickstart/#sessions">  Sessions HTTP et cookies Flask</a> | Guide de l'utilisateur (flask.palletsprojects.com)</li>
+            </ul>         
+        </p> 
+
+
+        <p> <strong> Jeu du nombre mystère </strong> <br>
+            <ul>
+                <li> Jeu du <a href="{{url_for('jeu')}}">nombre mystère</a></li>
+            </ul>         
+        </p> 
+
+        <p> <strong> Gestion des élèves </strong> <br>
+            <ul>
+                <li><a href="{{url_for('eleves')}}">Gestion des élèves </a>(Lister, mettre à jour, supprimer, enregistrer)</li>
+                <li><a href="{{url_for('recherche')}}">Rechercher </a> des élèves</li>
+                <li><a href="{{url_for('register')}}">Enregistrer une nouvelle inscription</a>  (nouveau élève)</li>
+            </ul>         
+        </p> 
+
+
+        <p><strong>Liste de redirections (avec code Python) pour le tutoriel </strong><br>
+            <ul>
+                <li> <a href="{{url_for('welcome')}}">Accueil </a>   </li>
+                <li> <a href="{{url_for('login')}}">Page Login (inscription | authentification)</a>   </li>
+                <li><a href="{{url_for('compteur')}}">Compteur </a> du nombre de fois le site a été visité</li>
+                <li> Traitement des<a href="{{url_for('erreur')}}"> erreurs </a>   </li>
+            </ul>                   
+        </p> 
+
+        <p><strong>Portail Suisse </strong><br>
+            <ul>
+                <li> <a href="{{url_for('index_ch')}}">Boîte à outils suisse</a>   </li>
+                <li><a href="{{url_for('montagnes')}}">Montagnes suisses </a> </li>
+                <li> <a href="{{url_for('histoire')}}"> Histoire et mythes suisses </a>   </li>
+                <li><a href="{{url_for('culture')}}">Culture, traditions et coutumes suisses </a></li>
+            </ul>                   
+        </p> 
+
+    </div>
+
+</div>
+<!-- END .CONTENT-->
+
+
+
+{% endblock %} 
+    <!-- 
+        FIN DE LA DECLARATION D'INSERTION DU CONTENU DU FICHIER navs.html 
+        Contient 
+            - les balises de la structure de base d'un fichier HTML (<head>)
+            - l'en-tête et les déclarations d'un fichier HTML (<header>)
+            - la barre de navigation (<nav>)
+            - la barre de pied de page (<footer>)
+    -->

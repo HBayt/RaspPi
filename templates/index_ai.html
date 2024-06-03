@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire avec zone de saisie et affichage d'image</title>
+   
+    <link rel="stylesheet" href="{{url_for('static', filename='css/my_ai.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Génère une image avec l'IA ! </h1>
+
+        <!-- FORMULAIRE -->
+        <!--  action="{{url_for('index_ai')}}" --> 
+        <form id="messageForm" method='POST'  action="{{url_for('index_ai')}}"> 
+            <label for="id_prompt">
+                Veuillez saisir la description de l'image souhaitée :
+            </label>
+            <textarea id="id_prompt" name="prompt" placeholder="Écrivez votre message ici..." rows="10", cols="50"></textarea>
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+
+        <!-- IMAGE CONTENEUR -->
+        <div id="imageContainer">
+            <h2>Image générée par Dall-E :</h2>
+            {% if image_url%}
+                <img id="displayedImage" src="{{'image_url'}}" alt="Votre image apparaîtra ici" style="display: none;">
+            {% endif %}
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

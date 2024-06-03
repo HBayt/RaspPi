@@ -1,0 +1,129 @@
+{% extends "navs_session.html" %} 
+  {% block css %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/my_jeu.css')}}"> 
+  {% endblock%}
+{% block content %}
+<!-- 
+    DEBUT DE L'INSERTION DU CONTENU DU FICHIER navs.html 
+    L'nsertion du contenu du fichier navs.html contient 
+        - les balises de la structure de base d'un fichier HTML (<head>)
+        - l'en-tête et les déclarations d'un fichier HTML (<header>)
+        - la barre de navigation (<nav>)
+        - la barre de pied de page (<footer>) 
+-->
+<div class="container" id="jeu">
+
+    <!-- TITRE (REQUETE  DEMANDEE) -->  
+    <h1 class="fw-normal">Jeu du nombre mystère</h1>  
+
+    {% if session['jeu_enCours']%} <!-- IF GAME IS NOT OVER -->
+    
+      <!--  FORMULAIRE METHOD POST  --> 
+      <form class="form-signin w-100 m-auto" action="{{url_for('jeu')}}" id="id_form-nbmystere" method="POST">     
+        <!-- LOGO Flask --> 
+        <div class="row justify-content-center">
+          <img src="{{url_for('static', filename='img/framwork-flask.jpg')}}" >
+        </div>
+        <br>
+      
+        <!-- CHAMP DE TYPE 'INPUT/TEXT' --> 
+        <div class="form-group">
+          <label for="id_nombre">Je suis un nombre entre 0-100.</label>      
+          <input type="text" class="form-control form-control-lg" id="id_nombre" name="nombre"  placeholder="Devine moi ..." required autofocus> <!-- minlength="8" (8 characters minimum)  -->
+          <!-- ATTRIBUT autofocus ==> To have the focus on this INPUT. For not using everytime the mouse to enter a number -->
+        </div>
+        <br>
+
+        <div class="form-group">
+          <!--  CHAMP/ BOUTON DE TYPE 'SOUMETTRE' --> 
+          <input class="btn btn-primary w-100 py-2" type="submit" value="Valider" name="btn_soumettre" >
+        </div>
+
+        <br>
+        <hr> 
+          <div class="form-group"> 
+            {% if session['tab_essais'] != [] %} 
+              <p>Tentative(s) </p> 
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tentative</th>
+                    <th>Résultat</th>
+                  </tr>
+                </thead>
+                <tbody>
+              {% for essai in session['tab_essais'] %}
+                  <tr>
+                    <td>{{essai}}</td>
+                    <td>{{"C'est plus! " if session['nb'] > essai else "C'est moins!"}}</td>
+                  </tr>
+              {% endfor%}
+                </tbody>
+              </table> 
+            {% endif %} <!-- ENDS .message-->  
+            <br>
+            <!--  Message from app_session.py : You won! | No the number is bigger/smaller ...  --> 
+            {% if message %} 
+              {{message}}
+            {% endif %} <!-- ENDS .message-->
+              <p> Il vous reste {{session['nb_essais']}} tentative(s) ! </p>
+              <div class="form-group">
+                <!--  CHAMP/ BOUTON DE TYPE 'SOUMETTRE' --> 
+                <a class="w-100 py-2 cl_recommancer" id="id_recommancer" href="{{url_for('jeu')}}">  Recommencer </a>
+              </div>
+            
+
+          </div>
+      </form><!-- END .FORM-->
+
+    {% else %}<!-- IF GAME IS AT THE END (LOST OR WIN) -->
+        
+        <!--  Message from app_session.py : You won! | No the number is bigger/smaller ...  --> 
+        {% if message %} 
+
+          {{message}}
+        
+          {% if session['nb_essais'] > 0 %} 
+            <p> Le nombre mystère était bien {{session['nb']}} ! Tu l'as trouvé en {{10-session['nb_essais']}} tentative(s). </p>
+          {% else %}
+            <p> C'est perdu! Tu as fait {{10-session['nb_essais']}}  tentatives, le nombre mystère était {{session['nb']}} !</p>
+          {% endif%}
+
+        {% endif %} <!-- ENDS .message-->
+        <br> 
+        
+
+      <div class="form-group">
+        <!--  CHAMP/ BOUTON DE TYPE 'Redirection' --> 
+        <a  href="{{url_for('jeu')}}">  
+          <input class="btn btn-primary w-100 py-2" value="Nouvelle partie" name="btn_rejouer" >
+        </a> 
+      </div><!-- Bravo ...! Recommencer le jeu --> 
+
+    {% endif %}
+
+    <hr> 
+
+    <!--  COPYRIGHT --> 
+    <p class="mt-5 mb-3 text-body-secondary">
+      &copy;
+      2017 - 
+      <script type="text/javascript"> document.write(new Date().getFullYear());</script> 
+    </p>
+   
+
+</div>
+
+
+<!-- END .MAIN-CONTENT-->
+{% endblock %} 
+    <!-- 
+        FIN DE LA DECLARATION D'INSERTION DU CONTENU DU FICHIER navs.html 
+        Contient 
+            - les balises de la structure de base d'un fichier HTML (<head>)
+            - l'en-tête et les déclarations d'un fichier HTML (<header>)
+            - la barre de navigation (<nav>)
+            - la barre de pied de page (<footer>)
+    -->
+
+

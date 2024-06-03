@@ -1,0 +1,33 @@
+{% extends "navs_session.html" %} 
+{% block content %} 
+
+<!-- 
+    DEBUT DE L'INSERTION DU CONTENU DU FICHIER navs.html 
+    L'nsertion du contenu du fichier navs.html contient 
+        - les balises de la structure de base d'un fichier HTML (<head>)
+        - l'en-tête et les déclarations d'un fichier HTML (<header>)
+        - la barre de navigation (<nav>)
+        - la barre de pied de page (<footer>) 
+-->
+
+
+    <div class="container">
+        <h1> Compteur (session/cookies)<h1>
+    </div>
+ 
+
+        <div class="container-xl mb-6">
+            <p>Calcul du nombre de visites d'une session utilisateur (session/cookies) après enregistrement et ouverture de session</p> 
+            <h4> Nombre de visites : {{visites}}</h4>  
+                         
+        </div>
+
+{% endblock %} 
+<!-- 
+    FIN DE LA DECLARATION D'INSERTION DU CONTENU DU FICHIER navs.html 
+    Contient 
+        - les balises de la structure de base d'un fichier HTML (<head>)
+        - l'en-tête et les déclarations d'un fichier HTML (<header>)
+        - la barre de navigation (<nav>)
+        - la barre de pied de page (<footer>)
+-->

@@ -1,0 +1,142 @@
+{% extends "navs_session.html" %} 
+  {% block css %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/my_checkbox.css')}}"> 
+  {% endblock%}
+{% block content %}
+
+
+
+
+    <div class="container">
+
+        <!-- ----------------------------------------------------------
+          TITRE (REQUETE  DEMANDEE)
+        -->       
+
+          <h1 class="h3 mb-3 fw-normal">Veuillez vous inscrire | vous authentifier </h1>  
+
+
+        <!--  ----------------------------------------------------------
+          FORMULAIRE METHOD POST  
+          --------------------------------------------------------------
+        --> 
+
+        <form class="form-signin w-100 m-auto" action="{{url_for('login')}}" id="id_usrform" method="POST">     
+
+
+        <!-- ----------------------------------------------------------
+          LOGO Flask
+        --> 
+        <div class="row justify-content-center">
+        <img src="{{url_for('static', filename='img/framwork-flask.jpg')}}" >
+        <!--  
+          <img class="mb-4"src="{{url_for('static', filename='img/framwork-flask.jpg')}}" class="feaurette-image img-fluid mx-auto" alt="" width="72" height="57">
+        --> 
+       </div>
+       <br>
+
+      <!-- ----------------------------------------------------------
+        RADIO BUTTON (Se souvenir ... )
+      --> 
+      <div class="form-check text-start my-3">
+
+
+        <input type="radio" name="rd_login" class="demo1" id="id_login" value="val_inscription" checked>
+        <label for="id_login">Inscription</label>
+
+        <input type="radio" name="rd_login" class="demo1" id="id_authentification" value="val_authentification" >
+        <label for="id_authentification">Authentification</label>
+
+      </div>
+        <!-- ----------------------------------------------------------
+          Champs de type 'TEXT' 
+
+            <div class="form-floating">
+              <input type="text" class="form-control" id="id_name" name="name" placeholder="Nom d'utilisateur">
+              <label for="id_name">Nom d'utilisateur</label>
+            </div>       
+        --> 
+
+
+        <!-- ----------------------------------------------------------
+          CHAMP DE TYPE 'E-MAIL' 
+        -->       
+      <div class="form-floating">
+        <input type="email" class="form-control" id="id_email" placeholder="name@example.com" name="in_courriel" required>
+        <label for="id_email">Adrese électronique</label>
+      </div>
+      <br>
+
+        <!-- ----------------------------------------------------------
+          CHAMP DE TYPE 'MOT DE PASSE' 
+        --> 
+      <div class="form-floating">
+        <input type="password" class="form-control" id="id_password" name="in_mdp" placeholder="Password" required> <!-- minlength="8" (8 characters minimum)  -->
+        <label for="id_password">Mot de passe</label>
+      </div> 
+      <br>
+
+
+
+
+        <!-- ----------------------------------------------------------
+          CHAMP/ BOUTON DE TYPE 'SOUMETTRE' 
+        --> 
+        <input class="btn btn-primary w-100 py-2" type="submit" value="S'inscrire | S'authentifier" name="btn_soumettre" >
+        <br><br>
+        <!-- 
+          <button class="btn btn-primary w-100 py-2" type="submit">S'inscrire | S'authentifier</button> 
+        --> 
+
+        <!--
+            ENVOI 
+            http://127.0.0.1:8080/action_page.php?fname=Marie&lname=Dupont&fav_language=HTML&vehicle2=Car&pets=hamster&comment=No+Comment+&password=12345678
+
+             fname=Marie
+             lname=Dupont
+             fav_language=HTML
+             vehicle2=Car
+             favorit_pet=hamster
+             comment=No+Comment+
+             password=12345678
+        -->
+
+        <!--  GESTION DES ERREURS (AUTHENTIFICATION ) --> 
+        <div class="row justify-content-center">
+          <h5>{% if message %} 
+           {{message}} 
+           <br> 
+           Réessayer !
+         {% endif %}  </h5>         
+     </div>
+     <br>
+
+
+
+      <!--  COPYRIGHT --> 
+      <p class="mt-5 mb-3 text-body-secondary">
+        &copy;
+        2017 - 
+        <script type="text/javascript"> document.write(new Date().getFullYear());</script> 
+      </p>
+
+
+      
+    </form><!-- END .FORM-->
+
+
+
+</div>
+  <!-- END .MAIN-CONTENT-->
+
+
+
+{% endblock %} 
+    <!-- 
+        FIN DE LA DECLARATION D'INSERTION DU CONTENU DU FICHIER navs.html 
+        Contient 
+            - les balises de la structure de base d'un fichier HTML (<head>)
+            - l'en-tête et les déclarations d'un fichier HTML (<header>)
+            - la barre de navigation (<nav>)
+            - la barre de pied de page (<footer>)
+    -->

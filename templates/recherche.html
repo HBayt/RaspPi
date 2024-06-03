@@ -1,0 +1,143 @@
+{% extends "navs_session.html" %}
+{% block content %}
+
+
+
+<div class="container">
+
+
+
+  <div class="row justify-content-center">
+    <!-- ----------------------------------------------------------
+            TITRE (REQUETE  DEMANDEE)
+          -->
+
+    <h1 class="h1 mb-1 fw-normal ">Gestion des élèves</h1>
+  </div>
+
+  <!--  ----------------------------------------------------------
+          FORMULAIRE METHOD POST  
+          --------------------------------------------------------------
+        -->
+
+  <form class="form-signin w-100 m-auto" action="{{url_for('recherche')}}" id="id_usrform" method="POST">
+
+
+    <!-- ----------------------------------------------------------
+          LOGO Flask
+        -->
+    <div class="row justify-content-center">
+      <img src="{{url_for('static', filename='img/framwork-flask.jpg')}}">
+      <!--  
+          <img class="mb-4"src="{{url_for('static', filename='img/framwork-flask.jpg')}}" class="feaurette-image img-fluid mx-auto" alt="" width="72" height="57">
+        -->
+    </div>
+    <br>
+
+    <!-- ----------------------------------------------------------
+          Champs de type 'TEXT' 
+
+            <div class="form-floating">
+              <input type="text" class="form-control" id="id_name" name="name" placeholder="Nom d'utilisateur">
+              <label for="id_name">Nom d'utilisateur</label>
+            </div>       
+        -->
+
+
+    <!-- ----------------------------------------------------------
+          CHAMP DE TYPE 'INPUT/TEXT' 
+        -->
+
+    <div class="form-group">
+      <label for="id_elevenom">Saisissez un nom (ex. dupont, martin) </label>
+      <input type="text" class="form-control form-control-lg" id="id_elevenom" name="elevenom"
+        placeholder="Rechercher..." required autofocus> <!-- minlength="8" (8 characters minimum)  -->
+      <!-- ATTRIBUT autofocus ==> To have the focus on this INPUT. For not using everytime the mouse to enter a number -->
+    </div>
+    <br>
+    <br>
+
+
+    <!-- ----------------------------------------------------------
+          CHAMP/ BOUTON DE TYPE 'SOUMETTRE' 
+        -->
+    <input class="btn btn-primary w-100 py-2" type="submit" value="Rechercher" name="btn_soumettre">
+    <!-- 
+        
+          <button class="btn btn-primary w-100 py-2" type="submit">S'inscrire | S'authentifier</button> 
+        -->
+
+
+
+    <!--  COPYRIGHT -->
+    <p class="mt-5 mb-3 text-body-secondary">
+      &copy;
+      2017 -
+      <script type="text/javascript"> document.write(new Date().getFullYear());</script>
+    </p>
+
+  </form><!-- END .FORM-->
+
+</div>
+
+<div class="container">
+  {% if eleves is not none %}
+  {% if eleves|length == 0 %}
+  <blockquote>
+    <h3> Aucune correspondante trouvée </h3>
+  </blockquote>
+  <hr>
+  {% else %}
+  <h3>Tableau des élèves trouvés </h3>
+  <hr>
+  <br>
+
+  <table class="table table-striped table-over">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Age</th>
+        <th>Classe</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for eleve in eleves %}
+      <tr>
+        <td>{{eleve[0]}}</td>
+        <td>{{eleve[1]}}</td>
+        <td>{{eleve[2]}}</td>
+        <td>{{eleve[3]}}</td>
+      </tr>
+      {% endfor%}
+    </tbody>
+  </table>
+  <hr>
+
+  <!--
+                <h3>Liste des élèves recherchés </h3> 
+                <ul>
+                {% for eleve in eleves %}
+                    <li>{{eleve[0]}} {{eleve[1]}} , {{eleve[2]}} ans, classe : {{eleve[3]}}</li>
+                {% endfor%}
+                </ul>                
+                -->
+
+  {% endif %}
+  {% endif %} <!-- ENDS .message-->
+  <br>
+</div>
+
+<!-- END .MAIN-CONTENT-->
+
+
+
+{% endblock %}
+<!-- 
+        FIN DE LA DECLARATION D'INSERTION DU CONTENU DU FICHIER navs.html 
+        Contient 
+            - les balises de la structure de base d'un fichier HTML (<head>)
+            - l'en-tête et les déclarations d'un fichier HTML (<header>)
+            - la barre de navigation (<nav>)
+            - la barre de pied de page (<footer>)
+    -->

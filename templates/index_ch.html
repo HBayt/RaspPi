@@ -1,0 +1,56 @@
+{% extends "navs_session.html" %} 
+{% block content %}
+
+
+      <div class="container-xl mb-6">
+         <!-- Titles | Titres -->
+        <p>
+          <h1> Bienvenue ! - Grüezi ! - Benvenuti ! - Bainvegni !</h1>    
+          <h2>Histoire et géographie de la Suisse </h2> 
+        </p>
+
+        <p>« La Suisse est un pays d'Europe occidentale composé de 26 cantons souverains ayant pour capitale fédérale la ville de Berne. 
+        </p>
+        <p>Elle est entourée de cinq pays : l'Autriche et le Liechtenstein à l'est, l'Allemagne au nord, la France à l'ouest et l'Italie au sud, et ne dispose pas d'accès à la mer. 
+        Les points extrêmes du pays se situent au nord à Oberbargen (canton de Schaffhouse), au sud à Chiasso (canton du Tessin), à l'ouest à Chancy (canton de Genève) et à l'est au Piz Chavalatsch (canton des Grisons). 
+        Le pays fait 350 km dans sa plus grande longueur et 220 km dans sa plus grande largeur.
+        Le relief de la Suisse est très hétérogène avec notamment trois grandes structures géographiques : les Alpes, le plateau et le Jura. Le point culminant du pays est la pointe Dufour avec ses 4 634 m d'altitude. 
+        La topographie des Alpes et les conditions climatiques y régnant, diverses influences atlantique, continentale ou méditerranéenne, font de la Suisse le « château d'eau de l'Europe ». 
+        Le Rhin, le Rhône et des affluents du Danube et du Pô prennent leur source dans le massif du Saint-Gothard, massif des Alpes qui compte de nombreux glaciers, notamment le glacier d'Aletsch, plus grand glacier d'Europe.
+        </p>
+        <p>Fin 2007, la Suisse compte 7 593 494 habitants. 
+          Le relief du pays a concentré l'essentiel de la population sur le plateau sur lequel on trouve la plupart des grandes villes, comme Genève, Lausanne, Lucerne, Berne, Bâle et Zurich. 
+          Cette population parle quatre langues nationales (l’allemand, le français, l’italien et le romanche) réparties dans des aires géographiques assez bien délimitées. »
+        </p> 
+
+
+
+      <!-- -------------------------------------------------------------------
+          TITLES | TITRES 
+          ------------------------------------------------------------------- --> 
+        <h2>Boîte à outils suisse</h2>
+        <ol>
+          <li><a href="{{url_for('culture')}}"   >Culture</a></li>
+          <li><a href="{{url_for('histoire')}}">Histoire</a></li>
+          <li><a href="{{url_for('art')}}">Art</a></li>
+          <li><a href="{{url_for('economie')}}"   >Economie</a></li>
+          <li><a href="{{url_for('education')}}"  >Education</a></li>
+          <li><a href="{{url_for('geographie')}}"   >Geographie</a></li>  
+          <li><a href="{{url_for('montagnes')}}"   >Montagnes Suisse</a></li>  
+        </ol>
+      </div>
+
+  </div>
+  <!-- END .CONTENT-->
+  
+  
+  
+  {% endblock %} 
+      <!-- 
+          FIN DE LA DECLARATION D'INSERTION DU CONTENU DU FICHIER navs.html 
+          Contient 
+              - les balises de la structure de base d'un fichier HTML (<head>)
+              - l'en-tête et les déclarations d'un fichier HTML (<header>)
+              - la barre de navigation (<nav>)
+              - la barre de pied de page (<footer>)
+      -->
