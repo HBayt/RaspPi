@@ -1,0 +1,70 @@
+    
+    def test_successful_database_connection(self):
+        result = select_fetchall_authentifications()
+        self.assertIsNotNone(result)
+        self.assertEqual(len(result), 0)
+        
+
+     
+
+
+    
+    def test_successful_execution(self):
+        result = select_fetchall_authentifications()
+        self.assertIsNotNone(result)
+        self.assertEqual(len(result), 3)
+        self.assertEqual(result[0][0], 'example1@gmail.com')
+        self.assertEqual(result[0][1], 'password1')
+        self.assertEqual(result[0][2], 'admin')
+        self.assertEqual(result[1][0], 'example2@gmail.com')
+        self.assertEqual(result[1][1], 'password2')
+        self.assertEqual(result[1][2], 'user')
+        self.assertEqual(result[2][0], 'example3@gmail.com')
+        self.assertEqual(result[2][1], 'password3')
+        self.assertEqual(result[2][2], 'user') 
+
+
+    
+    def test_records_fetched_successfully(self):
+        result = select_fetchall_authentifications()
+        self.assertIsNotNone(result)
+        self.assertEqual(len(result), 3)
+        self.assertEqual(result[0][0], 'user1@example.com')
+        self.assertEqual(result[0][1], 'password1')
+        self.assertEqual(result[0][2], 'admin')
+        self.assertEqual(result[1][0], 'user2@example.com')
+        self.assertEqual(result[1][1], 'password2')
+        self.assertEqual(result[1][2], 'user')
+        self.assertEqual(result[2][0], 'user3@example.com')
+        self.assertEqual(result[2][1], 'password3')
+        self.assertEqual(result[2][2], 'user') 
+
+
+    
+def test_print_total_records(self):
+        expected_output = 'Total records: 3'
+        with unittest.mock.patch('sys.stdout', new=io.StringIO()) as fake_stdout:
+            select_fetchall_authentifications()
+            self.assertEqual(fake_stdout.getvalue().strip(), expected_output) 
+
+
+    
+    def test_print_each_row(self):
+        expected_output = "Id = 1\nName = John\nEmail = john@example.com\n\nId = 2\nName = Jane\nEmail = jane@example.com\n\nId = 3\nName = Bob\nEmail = bob@example.com\n"
+        self.assertEqual(select_fetchall_authentifications(), expected_output)
+ 
+
+
+    
+    def test_close_connection(self):
+        # Arrange
+        expected = None
+        
+        # Act
+        result = select_fetchall_authentifications()
+        
+        # Assert
+        self.assertEqual(result, expected)
+ 
+
+
