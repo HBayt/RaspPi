@@ -1,0 +1,10 @@
+input[type="radio"].demo1 {
+    display: none;
+  }
+  input[type="radio"].demo1 + label {
+    padding: 0.3rem 0.5rem;
+    border: 2px dashed #137a9c; 
+  }
+  input[type="radio"].demo1:checked + label {
+    background-color:darkcyan
+  }

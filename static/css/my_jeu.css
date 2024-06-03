@@ -1,0 +1,69 @@
+#jeu{
+    max-width: 700px;
+    margin: auto;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border: 5px solid lightblue; 
+    border-radius: 20px;
+}
+
+#jeu .btn {
+    display: block; 
+    margin: auto; 
+    border: none; 
+    background-color: dodgerblue; 
+    padding: 5px 10px; 
+    border-radius: 5px;
+}
+
+#jeu .btn:hover{
+    cursor: pointer; 
+    background-color: lightblue; 
+    color: white;
+}
+
+#jeu hr{
+    width: 95%; 
+    color: rebeccapurple;
+}
+
+#jeu a {
+    text-decoration: none; /* To remove the underline */ 
+}
+
+.cl_recommancer{
+    display: block; 
+    margin: 10px auto; 
+    text-decoration: none; 
+    text-align: center;
+    color: white;
+    background-color: lightslategray; 
+    padding: 5px 10px; 
+    border-radius: 5px;
+}
+
+
+table, th, td{
+    border: 1px solid; 
+}
+
+table{
+    border-collapse: collapse;
+}
+
+
+/*
+
+
+#id_recommancer{
+    display: block; 
+    margin: 10px auto; 
+    text-decoration: none; 
+    padding: 5px 10px; 
+    border-radius: 5px;
+}
+
+
+
+*/ 

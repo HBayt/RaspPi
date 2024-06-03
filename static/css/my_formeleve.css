@@ -1,0 +1,54 @@
+div.register
+{
+    display: block; 
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+}
+.register
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+
+
+}
+
+
+.register h1 {
+    text-align: center;
+    color: #333;
+}
+.register label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+.register input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.register button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1084cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.register button:hover {
+    background-color: #1b829c;
+}
