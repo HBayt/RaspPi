@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <meta name="author" content="H. BAYTAR">
+
+    <!-- Title | Titre -->      
+    <title>Framwork | Cadriciel Flask</title>
+
+
+
+<!-- Comments -->  
+
+  </head>
+  <body>
+      <!-- -------------------------------------------------------------------
+          NAVBAR - BARRE DE NAVIGATION 
+          ------------------------------------------------------------------- --> 
+          <header>
+        
+            <!-- Titles | Titres -->
+           <p>  
+             <h1>Python&Flask | Login </h1> 
+           </p>
+   
+       </header>
+    <!-- -------------------------------------------------------------------
+    PAGE CONTENT | CONTENU DU CORPS DE LA PAGE 
+    ------------------------------------------------------------------- --> 
+<main>
+
+    <div class="container-xl mb-6">
+        <h3>Connexion</h3>
+
+        <!--  METHOD GET  --> 
+        <form action="{{url_for('traitement')}}" id="id_usrform" method="GET">     
+
+        <!-- FORMULAIRE POST 
+          <form action="{{url_for('traitement')}}" id="id_usrform" method="POST">        
+        --> 
+
+        <!--  CODE HTML (traitement = Nom de URL/Fichier) 
+          action="/traitement.php" --> 
+
+        <!-- Champs de type 'TEXT' --> 
+        <label for="id_name">Nom d'utilisateur</label><br>
+        <input type="text" id="id_name" name="name" required><br><br>
+
+        <!-- CHAMP DE TYPE 'MOT DE PASSE' --> 
+        <div>
+          <label for="pass">Password (8 characters minimum):</label>
+          <input type="password" id="id_password" name="password" minlength="8" required />
+        </div>    
+        <br><br>        
+
+        <!-- CHAMP/ BOUTON DE TYPE 'SOUMETTRE' --> 
+        <input type="submit" value="Enoyer le formulaire">
+        <!-- <button ....  --> 
+        </form>
+
+        <!--
+            ENVOI 
+            http://127.0.0.1:8080/action_page.php?fname=Marie&lname=Dupont&fav_language=HTML&vehicle2=Car&pets=hamster&comment=No+Comment+&password=12345678
+
+             fname=Marie
+             lname=Dupont
+             fav_language=HTML
+             vehicle2=Car
+             favorit_pet=hamster
+             comment=No+Comment+
+             password=12345678
+        -->
+
+    </div>
+</main>
+</body>
+</html>
+
+

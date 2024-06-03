@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="H. BAYTAR">
+    <title>Framwork | Cadriciel Flask</title> <!-- Title | Titre -->   
+
+    <!-- Comments -->  
+  </head>
+  <body>
+    <!-- -------------------------------------------------------------------
+    BODYS HEADER
+    ------------------------------------------------------------------- --> 
+    <header>
+        <p> <h1>Python&Flask | Eleves </h1> <!-- Titles | Titres -->
+        </p>
+    </header>
+
+    <!-- -------------------------------------------------------------------
+    MAIN SECTION - PAGE CONTENT | CONTENU DU CORPS DE LA PAGE 
+    ------------------------------------------------------------------- --> 
+    <main>
+        <div class="container-xl mb-6">
+            <h3>Liste d'élèves</h3>
+            <p>
+                Eleves 2</br></br>
+                {{eleves}} 
+                </br></br>
+
+                <ul> 
+                    {% for eleve in eleves %} 
+                        <li> {{eleve['nom']}} {{eleve['prenom']}} , {{eleve['classe']}}</li>
+                    {% endfor %} 
+                </ul> 
+            </p>
+        </div>
+
+    <!-- Exection 
+        http://192.168.2.147:8080/eleves?classe=IG1 
+        http://192.168.2.147:8080/eleves?classe=2A 
+    -->
+</main>
+</body>
+</html>

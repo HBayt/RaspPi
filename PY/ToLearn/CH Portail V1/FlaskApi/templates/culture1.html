@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Comments -->  
+
+    <meta charset="UTF-8">
+	
+    <meta name="description" content="Culture Suisse">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="H. BAYTAR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- Title | Titre -->      
+    <title>Culture</title>
+	
+
+
+      <!-- Bootstrap core CSS -->  
+      <!--    
+            1ier point = Dossier (Path) courant; 
+            2ième point = Dossier (Path) parent; 
+      -->
+      <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">   
+
+
+      <!-- Pointe vers le dossier 'navbars' et son contenu  -->  
+      <!--  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/"> -->  
+        
+
+
+      <!--  Test dans le navigateur web (Chrome, Firefox, etc.)
+        <script> let d = new Date(); alert("Today's date is " + d); </script>-->
+
+      <!--  Test dans la console du navigateur web (Chrome, Firefox, etc.)
+        <script> console.log("This is my script / Ceci est mon premier script") </script> -->
+
+
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+    
+    
+          /* Add Image logo to navbar   */
+          .logo-image{
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-top: -6px;
+          }
+    
+          /* Add social-buttons (google+, facebook, twitter, etc.)  */
+          #social-buttons {
+            float: right;
+            position: relative;
+            top: -9px;
+          }
+    
+    
+        </style>
+
+    
+    <!-- Custom styles for this template 
+    <link href="navbar.css" rel="stylesheet">-->
+  </head>
+  <body>
+
+      <!-- -------------------------------------------------------------------
+          NAVBAR - BARRE DE NAVIGATION 
+          ------------------------------------------------------------------- --> 
+          <header>
+            <!-- Navbar | Barre de navigation -->  
+            <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+              <div class="container-fluid">
+      
+                <!-- add Logo to Navbar --> 
+                <!-- Navbar button  -->  
+                <a class="navbar-brand" href="index.php"><!--  <a  href="/">  ==  http://localhost/dashboard/ --> 
+                  <div class="logo-image">
+                    <img src="../img/logo-drapeau.ico" class="img-fluid">
+                  </div>
+                </a>
+      
+                <!-- Navbar button| allways displayed button -->
+                <a class="navbar-brand" href="#">Portail Suisse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#id_sitenavbar" aria-controls="id_sitenavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <!-- nav-items (nav-links) -->  
+                <div class="collapse navbar-collapse" id="id_sitenavbar">
+                  <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                    </li>
+                    
+                    <!-- dropdown submenu 1 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Boîte à outils</a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                        <li><a class="dropdown-item" href="histoire.html">Histoire</a></li>
+                        <li><a class="dropdown-item" href="art.html">Art</a></li>
+                        <li><a class="dropdown-item" href="economie.html">Economie</a></li>
+                        <li><a class="dropdown-item" href="education.html">Education</a></li>
+                        <li><a class="dropdown-item" href="geographie.html">Geographie</a></li>        
+            
+                      </ul>
+                    </li>
+      
+                    <li class="nav-item">
+                      <a class="nav-link" href="montagnes.html">Montagnes</a>
+                    </li>
+      
+                    <!-- dropdown submenu 2 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Help | Aide </a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>    
+                        <li><a class="dropdown-item disabled" href="administration.html" tabindex="-1" aria-disabled="true">Administration</a></li>                    
+      
+                      </ul>
+                    </li>
+      
+                  </ul>
+      
+                  <!-- Search bar | Barre de recherche -->  
+                  <form>
+                    <input class="form-control" type="text" placeholder="Search | Rechercher" aria-label="Search">
+                  </form>
+      
+      
+      
+                </div><!-- Comments -->  
+              </div>
+            </nav>
+      
+          </header>
+      
+      <!-- Page content | Contenu du coprs de la page-->  
+      <main>
+        <div class="container-xl mb-6">
+            <!-- Titles | Titres -->
+            <p>
+                <h1> Bienvenue ! - Grüezi ! - Benvenuti ! - Bainvegni !</h1>    
+                <h2>Culture de la Suisse</h2> 
+            </p>
+
+            <p>
+                
+                La culture de la Suisse est l'ensemble des signes distinctifs qui caractérisent la société suisse. 
+                Elle englobe les traditions, les croyances, le patrimoine commun, les langues, la politique culturelle suisse, les moyens d'encouragement et de diffusion de la culture, 
+                les manifestations et lieux de culture ainsi que les arts pratiqués en Suisse ou par des Suisses.
+            <br>
+                La Suisse, par sa situation géographique et son histoire, est imprégnée des cultures latines et germaniques ; 
+                les coutumes locales cohabitent selon les régions linguistiques du pays. En effet, le pays possède quatre langues nationales (l'allemand (64 %), le français (20 %), l'italien (6 %) et le romanche (moins de 1 %)). 
+                Cette diversité culturelle, essentielle pour la cohésion du pays, participe de l'identité de la Suisse.
+
+            </p>
+                
+            <h2>Traditions et Coutumes</h2>
+            <h3>Patrimoine immatériel</h3>
+
+
+            <p>
+            Une liste de 167 traditions et coutumes sélectionnées parmi les 387 proposées par les cantons a été retenue pour figurer sur la liste des traditions vivantes de Suisse 
+            par l'UNESCO pour l'inscription des traditions au patrimoine culturel immatériel de l'humanité.    
+            </p>
+
+
+            <h4>Symboles patriotiques</h4>
+
+            <p><strong>Hymne national</strong></p>
+            <p>Jusqu'à la fin du XIXe siècle il n'existe aucune tradition d'hymne suisse. Le chant patriotique Ô Monts indépendants a été le premier hymne patriotique et le plus utilisé jusqu'en 1961. À partir de cette date il est en concurrence avec le Cantique suisse qui devient l'hymne national officielle de la Suisse en 1981. Le Cantique suisse est un chant composé en 1841 par Alberich Zwyssig (1808-1854) avec les paroles de Leonhard Widmer (1809-1867). </p>
+
+            <p><strong>Figure allégorique nationale</strong></p>
+            <p>Helvetia est une figure allégorique féminine personnifiant la Suisse. Son nom vient des Helvètes, une peuplade celte qui a occupé le plateau suisse à partir de 100 av. J.-C. environ4, et il désigne également la Suisse. Les Helvètes vont être progressivement incorporés à l'imagerie populaire des ancêtres fondateurs de la nation.
+            Au XVIIe siècle, la Confédération ne possédait pas encore de représentation symbolique forte. Au XVIIIe siècle, Helvetia et Guillaume Tell sont des symboles patriotiques suisse. Mais à partir de 1848, c'est Helvetia qui devient l'emblème national du nouvel État fédéral. Ce symbole devient alors omniprésent, que ce soit sous la forme d'œuvre d'art, sur les monuments, sur les timbres ou sur les pièces de monnaie.
+            </p>
+
+            <p><strong>Mythes fondateurs de la Suisse</strong></p>
+            <ol>
+
+                <li><strong>Les Romains sous le joug : </strong>Ce mythe commémore la victoire de Divico sur les Romains, lors de la bataille d'Agen (107 av. J.-C.).</li>
+                <li><strong>Le serment du Grütli : </strong>Cet accord entre trois communautés situées dans ce qui forme de nos jours la Suisse primitive, a été considéré jusqu'au XIXe siècle comme l'acte fondateur de la Confédération suisse et reste de nos jours un élément important de l'imaginaire populaire. Il ne doit pas être confondu avec le pacte fédéral d'alliance perpétuelle de 1291 entre les communautés d'Uri, de Schwyz et de Nidwald.</li>
+                <li><strong>Guillaume Tell : </strong>Il aurait vécu dans le canton d'Uri au début du XIVe siècle et se serait rebellé contre le bailli autrichien qui l'avait défié de tirer un carreau d'arbalète dans une pomme posée sur la tête de son fils. Au XIXe siècle Tell devient le symbole légendaire d’une identité nationale ancestrale.</li>
+                <li><strong>La destruction des châteaux : </strong>La légende de la destruction des châteaux raconte que des petits châteaux en forme de tour construits vers 1300 par les Habsbourg voulant faire administrer leurs biens situés sur le territoire des Waldstätten par des baillis étrangers, se heurtent à la résistance des habitants des vallées et que ceux-ci ont détruit ces petits châteaux peu de temps après, vers 1314.</li>
+                <li><strong>Winkelried : </strong>Arnold von Winkelried est un héros légendaire qui permit aux Confédérés de remporter la victoire sur les troupes du duc Léopold III d'Autriche lors de la bataille de Sempach le 9 juillet 1386, les Suisses n'arrivant pas à percer le front des lances autrichiennes.</li>
+                <li><strong>La soupe au lait de Kappel : </strong>Légende suisse symbolisant l´esprit de neutralité helvétique. Lors de la première guerre de Kappel qui est une guerre de religion ayant opposé les cantons catholiques aux protestants, avant le déclenchement des hostilités, ayant pris connaissance de négociations de paix, les soldats des deux camps auraient partagé sur la frontière qui les séparait une soupe faite de lait et de pain, préparée dans un grand chaudron.</li></li>
+            </ol>
+
+
+            <h4>Langues</h4>
+                <p>
+                    Pays plurilingue, la Suisse est partagée en quatre zones linguistiques où, dans chacune d'entre elles, une seule langue officielle a cours, soit l'allemand, le français, l'italien ou le romanche.
+                    Quatre grands principes sont inscrits dans la Constitution fédérale, ce sont : l'égalité des langues, la liberté des citoyens en matière de langue, le principe de la territorialité des langues et la protection des langues minoritaires. Trois langues officielles (allemand, français et italien) sont égales en droit au niveau fédéral depuis 1848, le romanche est partiellement langue officielle.
+                    En vertu du principe de territorialité, les frontières linguistiques sont fixées par les cantons. Certains cantons sont plurilingues. Le Röstigraben est le nom que l'on donne à la frontière culturelle et linguistique entre l'allemand et le français. Cette frontière trouve ses racines dans l'histoire.
+                </p>
+
+                <h4>Religion</h4>
+                <p>
+                    En Suisse, la liberté de conscience et de croyance est garantie par la Constitution; Toute personne a le droit, mais ne peut être contrainte, d’adhérer à une communauté religieuse et de suivre un enseignement religieux.
+                    En l'an 2000, les différentes églises catholiques représentent environ 42 % de la population de la Suisse, les différentes églises protestantes environ 35 %. 11 % se déclarent sans appartenance et 4,33 % ne donnent pas d'indications. Viennent ensuite les communautés islamiques avec 4,3 % puis, avec moins d'un demi pour-cent chacune, les confessions juive, bouddhiste et hindouiste.
+                </p>
+
+
+            <h4>Fêtes</h4>
+            <p>
+                Les motifs des fêtes en Suisse sont religieux, historiques et sociaux. Les motifs commerciaux apparaissent au xxe siècle. La plupart des fêtes ont un cycle annuel selon le rythme des saisons et des travaux agricoles, les fêtes religieuses selon le rythme de l'année liturgique. 
+                Au bas Moyen Âge et au début de l'époque moderne existaient plus de cent jours fériés en Suisse. Ce nombre s'est considérablement réduit avec la Réforme puis les Lumières catholiques et l'industrialisation. 
+                Les rites et fêtes qui accompagnent l'individu dans ses changements de statut social tels que baptême, confirmation et mariage, 
+                qui définissaient autrefois le rôle de l'individu dans la communauté, ont maintenant uniquement lieu dans le cercle privé où le public n'est éventuellement admis qu'en spectateur. 
+                <br><br>
+                De par la diversité culturelle, la plupart des fêtes sont locales ou régionales. Certaines fêtes sont célébrées dans toute la Suisse comme la fête nationale suisse, le Jeûne ou les principales fêtes religieuses.
+                La fête nationale suisse est célébrée le 1er août. Chaque commune organise à la tombée de la nuit feu de joie, cortège aux lampions et allocutions. Éventuellement un feu d'artifice. C'est un jour férié officiel dans toute la Suisse depuis 1994 seulement.
+                <br><br>
+                Le Jeûne fédéral est institué en 1832, sur proposition du canton d'Argovie, il a été décrété « jour d’action de grâces, de pénitence et de prière pour toute la Confédération helvétique » par la Diète fédérale. Il est fixé au troisième dimanche de septembre. Le canton de Genève continue d'observer sa propre date de jeûne, le jeudi qui suit le premier dimanche de septembre (il est appelé Jeûne genevois). Des journées de prière et de pénitence hebdomadaires ou mensuelles existent à partir du xvie siècle. Les cantons réformés les instituèrent en raison des épidémies de peste et des disettes (Bâle en 1541, Zurich en 1571, Berne en 1577). Genève avait institué dès 1567 un jour de jeûne et de prière, répété irrégulièrement, au gré de l'actualité locale. Dès 1643 les cantons catholiques instituèrent eux aussi des journées de recueillement et de prière.
+                <br><br>
+                Parmi les fêtes mettant en scène le règne animal on trouve les combats de reines, la Poya et le Marché-concours de Saignelégier.  
+                
+            </p>
+         </div>
+        </main>
+
+
+    <!-- Footer | Pied de page -->  
+    <footer class="py-5">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Art et Education</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="art.html" class="nav-link p-0 text-muted">Art</a></li>
+              <li class="nav-item mb-2"><a href="education.html" class="nav-link p-0 text-muted">Education</a></li>
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire </a></li>              
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Culture et Histoire</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire</a></li>
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="geographie.html" class="nav-link p-0 text-muted">Geographie</a></li>
+              <li class="nav-item mb-2"><a href="economie.html" class="nav-link p-0 text-muted">Economie</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Nos services</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="usercompte.php" class="nav-link p-0 text-muted">Compte utilisateur</a></li>              
+              <li class="nav-item mb-2"><a href="apropos.html" class="nav-link p-0 text-muted">About | A propos</a></li>
+              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted">Home | Accueil</a></li>        
+              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQs</a></li>                    
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>S'abonner à notre lettre d'information</h5>
+              <p>Un bulletin d'information mensuel sur les nouveautés et les événements les plus excitants.</p>
+
+              <!-- 
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>              
+              --> 
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label> <!-- Email address -->
+                <input id="newsletter1" type="text" class="form-control" placeholder="Adresse e-mail">
+                <button class="btn btn-primary" type="button">S'abonner</button><!-- Subscribe-->
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>
+              &copy;
+              <script type="text/javascript"> document.write(new Date().getFullYear());</script> 
+              HBaytar, Inc. All rights reserved. 
+            </p>
+
+            <!-- Social Media Icons in Footer -->  
+            <div id="social-buttons">
+              <a href="#" rel="me"><img title="Portail Suisse bei Facebook" src="../img/footer/footfacebook.png" alt="Facebook Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Skype" src="../img/footer/footskype.png" alt="Skype Button"/></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Flickr" src="../img/footer/footflickr.png" alt="Flickr Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Google" src="../img/footer/footgoogle.png" alt="Google Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Reddit" src="../img/footer/footreddit.png" alt="Reddit Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Twitter" src="../img/footer/foottwitter.png" alt="Twitter Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei WhatsApp" src="../img/footer/footwhatsapp.png" alt="WhatsApp Button" /></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+
+
+        <!-- Import script(s) | Importation de script(s)-->  
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+  
+    </body>
+</html>
+
+
+ <!--  
+    SCRIPT JAVASCRIPT  
+    Placez les les balises de SCRIPT JS avant la fin de corps </body>
+
+
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    SCRIPT JQuery 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  -->
+  

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Comments -->  
+
+    <meta charset="UTF-8">
+	
+    <meta name="description" content="Art Suisse">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="H. BAYTAR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- Title | Titre -->      
+    <title>Art</title>
+	
+
+
+      <!-- Bootstrap core CSS -->  
+      <!--    
+            1ier point = Dossier (Path) courant; 
+            2ième point = Dossier (Path) parent; 
+      -->
+      <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">   
+
+
+      <!-- Pointe vers le dossier 'navbars' et son contenu  -->  
+      <!--  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/"> -->  
+        
+
+
+      <!--  Test dans le navigateur web (Chrome, Firefox, etc.)
+        <script> let d = new Date(); alert("Today's date is " + d); </script>-->
+
+      <!--  Test dans la console du navigateur web (Chrome, Firefox, etc.)
+        <script> console.log("This is my script / Ceci est mon premier script") </script> -->
+
+
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+    
+    
+          /* Add Image logo to navbar   */
+          .logo-image{
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-top: -6px;
+          }
+    
+          /* Add social-buttons (google+, facebook, twitter, etc.)  */
+          #social-buttons {
+            float: right;
+            position: relative;
+            top: -9px;
+          }
+    
+    
+        </style>
+
+    
+    <!-- Custom styles for this template 
+    <link href="navbar.css" rel="stylesheet">-->
+  </head>
+  <body>
+
+      <!-- -------------------------------------------------------------------
+          NAVBAR - BARRE DE NAVIGATION 
+          ------------------------------------------------------------------- --> 
+          <header>
+            <!-- Navbar | Barre de navigation -->  
+            <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+              <div class="container-fluid">
+      
+                <!-- add Logo to Navbar --> 
+                <!-- Navbar button  -->  
+                <a class="navbar-brand" href="index.php"><!--  <a  href="/">  ==  http://localhost/dashboard/ --> 
+                  <div class="logo-image">
+                    <img src="../img/logo-drapeau.ico" class="img-fluid">
+                  </div>
+                </a>
+      
+                <!-- Navbar button| allways displayed button -->
+                <a class="navbar-brand" href="#">Portail Suisse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#id_sitenavbar" aria-controls="id_sitenavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <!-- nav-items (nav-links) -->  
+                <div class="collapse navbar-collapse" id="id_sitenavbar">
+                  <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                    </li>
+                    
+                    <!-- dropdown submenu 1 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Boîte à outils</a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                        <li><a class="dropdown-item" href="histoire.html">Histoire</a></li>
+                        <li><a class="dropdown-item" href="art.html">Art</a></li>
+                        <li><a class="dropdown-item" href="economie.html">Economie</a></li>
+                        <li><a class="dropdown-item" href="education.html">Education</a></li>
+                        <li><a class="dropdown-item" href="geographie.html">Geographie</a></li>        
+            
+                      </ul>
+                    </li>
+      
+                    <li class="nav-item">
+                      <a class="nav-link" href="montagnes.html">Montagnes</a>
+                    </li>
+      
+                    <!-- dropdown submenu 2 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Help | Aide </a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>    
+                        <li><a class="dropdown-item disabled" href="administration.html" tabindex="-1" aria-disabled="true">Administration</a></li>                    
+      
+                      </ul>
+                    </li>
+      
+                  </ul>
+      
+                  <!-- Search bar | Barre de recherche -->  
+                  <form>
+                    <input class="form-control" type="text" placeholder="Search | Rechercher" aria-label="Search">
+                  </form>
+      
+      
+      
+                </div><!-- Comments -->  
+              </div>
+            </nav>
+      
+          </header>
+      
+      <!-- Page content | Contenu du coprs de la page-->  
+      <main>
+        <div class="container-xl mb-6">
+            <!-- Titles | Titres -->
+            <p>
+                <h1> Bienvenue ! - Grüezi ! - Benvenuti ! - Bainvegni !</h1>    
+                <h2>Art Suisse</h2> 
+            </p>
+
+
+            <p>
+                La Suisse possède une étonnante diversité de la production littéraire, artistique, architecturale et musicale. 
+                Ceci est dû en grande partie par sa position au cœur de l'Europe à l'intersection des cultures française, germanique et italienne.
+            </p>
+
+    <ol>
+        <li><strong>Arts plastiques</strong>
+            <ul>
+                <li>Musées d'art suisse</li>
+                <li>Art Basel</li>
+                <li>Centre Paul Klee</li>
+                <li>Fondation Gianadda </li>
+                <li>Kunstmuseum de Bâle</li>
+                <li>Musée d'Art moderne et contemporain de Genève </li>
+                <li>Musée Tinguely</li>
+              </ul>
+        </li>
+
+        <li><strong>Arts graphiques</strong>
+            <ul>
+                 <li>Helvetica</li>
+                 <li>Style typographique international</li>
+                <li>Bande dessinée </li>
+                <li>BDSierre</li>
+                <li>Titeuf</li>
+              </ul>
+        </li>
+        <li><strong>Musique et vie musicale </strong>
+            <ul>
+                 <li>Festival de Jazz de Montreux </li>
+                 <li>Orchestre de la Suisse romande</li>
+                <li>Paléo Festival Nyon</li>
+                <li>Rock Oz'Arènes</li>
+                <li>Les Trois Cloches</li>
+            </ul>
+        </li>
+
+        <li><strong>Littérature</strong>
+            <ul>
+                <li>Prix littéraire en Suisse</li>
+               <li>Prix Schiller </li>
+               <li>Bibliothèque nationale suisse</li>
+               <li>Liste des bibliothèques cantonales</li>
+               <li>Fondation Martin Bodmer </li>
+               <li> Écrits suisses - Heidi</li>
+             </ul>
+        </li>
+        <li><strong>Arts du spectacle</strong>
+            <ul>
+               <li>Anneau Hans-Reinhart </li>
+               <li>Béjart Ballet Lausanne </li>
+               <li>Cirque Knie </li>
+               <li>Prix de Lausanne</li>
+             </ul>
+        </li>
+        <li><strong>Cinéma</strong>
+            <ul>
+               <li><a href="https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Film_suisse">Films suisses</a></li> 
+               <li>Festival international du film de Locarno </li>
+               <li>Cinémathèque suisse</li>
+             </ul>
+        </li>
+        <li><strong>Personnalités artistiques</strong>
+            <ul>
+                <li><strong>Artistes : </strong>Cuno Amiet, Ursula Andress, Ernest Ansermet, Francesco Borromini, 
+                    Mario Botta, Blaise Cendrars, Le Corbusier, Friedrich Dürrenmatt, 
+                    Stephan Eicher, Patrick Juvet, Max Frisch, Alberto Giacometti, 
+                    Jean-Luc Godard, Grock, Ferdinand Hodler, Arthur Honegger, Marthe Keller, 
+                    Paul Klee, Meret Oppenheim, Jean-Jacques Rousseau, C. F. Ramuz, Michel Simon, 
+                    Anne-Marie Simond - Louis Soutter, Jean Tinguely, Rodolphe Töpffer, 
+                    Félix Vallotton, Zep.
+
+                <li><strong>Collectionneur : </strong>Ernst Beyeler.</li>
+             </ul>
+        </li>
+      </ol>
+
+    </div>
+</main>
+
+
+    <!-- Footer | Pied de page -->  
+    <footer class="py-5">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Art et Education</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="art.html" class="nav-link p-0 text-muted">Art</a></li>
+              <li class="nav-item mb-2"><a href="education.html" class="nav-link p-0 text-muted">Education</a></li>
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire </a></li>              
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Culture et Histoire</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire</a></li>
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="geographie.html" class="nav-link p-0 text-muted">Geographie</a></li>
+              <li class="nav-item mb-2"><a href="economie.html" class="nav-link p-0 text-muted">Economie</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Nos services</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="usercompte.php" class="nav-link p-0 text-muted">Compte utilisateur</a></li>              
+              <li class="nav-item mb-2"><a href="apropos.html" class="nav-link p-0 text-muted">About | A propos</a></li>
+              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted">Home | Accueil</a></li>        
+              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQs</a></li>                    
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>S'abonner à notre lettre d'information</h5>
+              <p>Un bulletin d'information mensuel sur les nouveautés et les événements les plus excitants.</p>
+
+              <!-- 
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>              
+              --> 
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label> <!-- Email address -->
+                <input id="newsletter1" type="text" class="form-control" placeholder="Adresse e-mail">
+                <button class="btn btn-primary" type="button">S'abonner</button><!-- Subscribe-->
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>
+              &copy;
+              <script type="text/javascript"> document.write(new Date().getFullYear());</script> 
+              HBaytar, Inc. All rights reserved. 
+            </p>
+
+            <!-- Social Media Icons in Footer -->  
+            <div id="social-buttons">
+              <a href="#" rel="me"><img title="Portail Suisse bei Facebook" src="../img/footer/footfacebook.png" alt="Facebook Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Skype" src="../img/footer/footskype.png" alt="Skype Button"/></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Flickr" src="../img/footer/footflickr.png" alt="Flickr Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Google" src="../img/footer/footgoogle.png" alt="Google Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Reddit" src="../img/footer/footreddit.png" alt="Reddit Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Twitter" src="../img/footer/foottwitter.png" alt="Twitter Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei WhatsApp" src="../img/footer/footwhatsapp.png" alt="WhatsApp Button" /></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+
+
+        <!-- Import script(s) | Importation de script(s)-->  
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+  
+    </body>
+</html>
+
+
+ <!--  
+    SCRIPT JAVASCRIPT  
+    Placez les les balises de SCRIPT JS avant la fin de corps </body>
+
+
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    SCRIPT JQuery 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  -->
+  

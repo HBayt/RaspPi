@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Comments -->  
+
+    <meta charset="UTF-8">
+	
+    <meta name="description" content="Economie Suisse">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="H. BAYTAR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- Title | Titre -->      
+    <title>Economie</title>
+	
+
+
+      <!-- Bootstrap core CSS -->  
+      <!--    
+            1ier point = Dossier (Path) courant; 
+            2ième point = Dossier (Path) parent; 
+      -->
+      <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">   
+
+
+      <!-- Pointe vers le dossier 'navbars' et son contenu  -->  
+      <!--  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/"> -->  
+        
+
+
+      <!--  Test dans le navigateur web (Chrome, Firefox, etc.)
+        <script> let d = new Date(); alert("Today's date is " + d); </script>-->
+
+      <!--  Test dans la console du navigateur web (Chrome, Firefox, etc.)
+        <script> console.log("This is my script / Ceci est mon premier script") </script> -->
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+      /* Add Image logo to navbar   */
+      .logo-image{
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-top: -6px;
+      }
+
+      /* Add social-buttons (google+, facebook, twitter, etc.)  */
+      #social-buttons {
+        float: right;
+        position: relative;
+        top: -9px;
+      }
+
+
+    </style>
+
+    
+    <!-- Custom styles for this template 
+    <link href="navbar.css" rel="stylesheet">-->
+  </head>
+  <body>
+
+      <!-- -------------------------------------------------------------------
+          NAVBAR - BARRE DE NAVIGATION 
+          ------------------------------------------------------------------- --> 
+          <header>
+            <!-- Navbar | Barre de navigation -->  
+            <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+              <div class="container-fluid">
+      
+                <!-- add Logo to Navbar --> 
+                <!-- Navbar button  -->  
+                <a class="navbar-brand" href="index.php"><!--  <a  href="/">  ==  http://localhost/dashboard/ --> 
+                  <div class="logo-image">
+                    <img src="../img/logo-drapeau.ico" class="img-fluid">
+                  </div>
+                </a>
+      
+                <!-- Navbar button| allways displayed button -->
+                <a class="navbar-brand" href="#">Portail Suisse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#id_sitenavbar" aria-controls="id_sitenavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <!-- nav-items (nav-links) -->  
+                <div class="collapse navbar-collapse" id="id_sitenavbar">
+                  <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                    </li>
+                    
+                    <!-- dropdown submenu 1 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Boîte à outils</a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                        <li><a class="dropdown-item" href="histoire.html">Histoire</a></li>
+                        <li><a class="dropdown-item" href="art.html">Art</a></li>
+                        <li><a class="dropdown-item" href="economie.html">Economie</a></li>
+                        <li><a class="dropdown-item" href="education.html">Education</a></li>
+                        <li><a class="dropdown-item" href="geographie.html">Geographie</a></li>        
+            
+                      </ul>
+                    </li>
+      
+                    <li class="nav-item">
+                      <a class="nav-link" href="montagnes.html">Montagnes</a>
+                    </li>
+      
+                    <!-- dropdown submenu 2 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Help | Aide </a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>    
+                        <li><a class="dropdown-item disabled" href="administration.html" tabindex="-1" aria-disabled="true">Administration</a></li>                    
+      
+                      </ul>
+                    </li>
+      
+                  </ul>
+      
+                  <!-- Search bar | Barre de recherche -->  
+                  <form>
+                    <input class="form-control" type="text" placeholder="Search | Rechercher" aria-label="Search">
+                  </form>
+      
+      
+      
+                </div><!-- Comments -->  
+              </div>
+            </nav>
+      
+          </header>
+      
+      <!-- Page content | Contenu du coprs de la page-->  
+      <main>
+        <div class="container-xl mb-6">
+            <!-- Titles | Titres -->
+            <p>
+                <h1> Bienvenue ! - Grüezi ! - Benvenuti ! - Bainvegni !</h1>    
+                <h2>Economie de la Suisse</h2> 
+            </p>
+            <p>
+                L’économie suisse est l’une des plus développées du monde. Le taux de chômage y est particulièrement bas ainsi que le taux d'inflation. 
+                L’industrie est spécialisée dans la production à haute valeur ajoutée. La Suisse dispose de ressources naturelles comme l’énergie hydraulique ou le bois, mais importe les ressources d'énergie fossile.
+            </p>
+
+            <p>
+                L'économie de la Suisse figure parmi les plus prospères et les plus développées au monde en dépit de l'absence de matières premières et de son absence de débouché maritime. 
+                Le taux de chômage y est structurellement bas, de même que le taux d'inflation. L'industrie, tournée vers l'exportation, est largement spécialisée dans les produits à haute valeur ajoutée.
+
+                Comme la plupart des pays européens, la Suisse est essentiellement un pays de petites et moyennes entreprises (PME) occupant moins de 500 personnes, phénomène renforcé par le développement du secteur tertiaire : plus de 99 % des entreprises privées non agricoles étaient ainsi des PME en 2005, un chiffre qui a peu varié depuis la seconde moitié du xxe siècle : l'évolution du nombre moyen d'emplois à temps plein ne montre pas de tendance à la concentration malgré le dynamisme accru des grandes entreprises privées.
+            </p>
+
+    <ol>
+        <li> <strong>Agriculture : </strong> Le secteur primaire occupe une place minime dans l'économie suisse car les coûts ne permettent pas la vente à l'étranger sans des aides de l'État se chiffrant en milliards de francs. Ces aides qui permettent de faire vivre dans des conditions raisonnables bon nombre d'agriculteurs-paysagers, sont définies par un article constitutionnel50. 
+            <ul>
+                <li>Dôle (AOC) : La Dôle est un des vins suisses les plus connus. 
+                    Contrairement à une opinion répandue, elle n'est pas un mono-cépage, mais l'alliance de deux cépages, le pinot noir qui lui apporte son tempérament et son bouquet et le gamay 
+                    qui lui donne sa robustesse. 
+                    La Dôle est souvent qualifiée de « capiteuse, racée et moelleuse ». Sa robe a des reflets de pourpre. 
+                    La Dôle est issue de pinot noir pur ou d'un assemblage d'au moins 85 % de pinot noir et de gamay, au sein duquel le pinot noir doit être majoritaire. Les 15 % restants peuvent être constitués de n'importe quel autre cépage autorisé en Valais.</li>
+                <li>Élevage bovin</li>
+                <li>Œil-de-perdrix (vin suisse, composé exclusivement de Pinot Noir pressé en blanc) </li>
+                <li>Viticulture (La viticulture est l'activité agricole consistant à cultiver une certaine variété de vigne produisant un fruit pour la consommation humaine : le raisin.) </li>
+                 <li><strong>Entreprises agroalimentaires :</strong>  Hero, Bell, Emmi, Aryzta, Micarna, Netsté, Lindt, Bischofszell, Orior, Ospelt, Cremo, etc. </li>               
+              </ul>
+        </li>
+
+        <li><strong>Entreprises suisses</strong>
+            <ul>
+                <li><strong>Entreprises pharmaceutiques : </strong> Abionic, Actelion, Berna Biotech, Debiopharm, Ferring Pharmaceuticals, Galderma, Galenica, Novartis, Nycomed, Roche, Sandoz (entreprise chimique), Serono, Sun Store, Weleda</li>
+                <li><strong>Groupe ABB : </strong>entreprise leader en ingénierie à l'échelle mondiale, qui développe et déploie des produits et des systèmes à haute efficacité énergétique. </li>
+                <li>Breitling (montres)</li>
+                <li>La Poste suisse  </li>
+                <li><strong>Nestlé : </strong>Le groupe Nestlé possède 413 usines dans. 85 pays du monde et son siège est à Vevey. En Suisse, l'entreprise a enregistré CHF 1,262 milliard de ventes en 2017.</li>
+                <li>Novartis (multinationale pharmaceutique suisse basée à Bâle, en Suisse)</li>
+                <li>Rolex (concepteur et fabricant de montres suisse basé à Genève, en Suisse. Fondée en 1905 sous le nom de Wilsdorf et Davis par Hans Wilsdorf et Alfred Davis.)</li>
+                <li>Schindler (Ascenseurs, escaliers mécaniques et trottoirs roulants)</li>
+               <li>Swatch Group (la plus grande entreprise horlogère du monde et emploie environ 31 000 personnes dans 50 pays.)</li>
+               <li>Swisscom (plus grande entreprise de télécommunications et l'une des plus grandes entreprises informatiques de Suisse. Siège à Ittigen, Berne)</li>
+            </ul>
+        <li><strong>Services : </strong> 
+            Entreprises du secteur financier, Banque nationale suisse, Banques cantonales, Credit Suisse, Migros, La Suva (plus grand assureur-accidents de Suisse, également appelée Caisse nationale suisse d'assurance en cas d'accidents), 
+            Swiss Re (deuxième plus grande entreprise de réassurance (assurances dommages et assurances vie) au monde après Munich Re), UBS</li>     
+        </li>
+
+        <li><strong>Transport et Énergie : </strong>
+            Entreprises de télécommunications, Transport aérien en Suisse, Hydroélectricité, Barrages (liste des lacs de barrage), Industrise nucléaires en Suisse, 
+            CarPostal, CFF (principale compagnie ferroviaire de Suisse), Musée suisse des transports, Swiss, TCS, Transport d'automobiles accompagnées
+        </li>
+        </ul>
+        </li>
+        <li> <strong>Divers : </strong> 
+        
+            <ul>
+                <li><strong>Entreprises touristiques : </strong> Genève Aéroport, Palexpo, Restaurant Le Chef, Lausanne Palace, Hotel Ramada Encore Genève, etc.</li>
+                <li><strong>Marques suisses : </strong>Caran d'Ache, Ricola, Rolex, Weber (Stephen Schweiz GmbH), Pelikan, Lindt, Tissot, Victorinox, V-Zug, Kuhn Rikon, Swatch, Omega, etc.</li>
+                <li><strong>Forum de Davos : </strong> réunion annuelle de janvier à Davos, en Suisse. Il réunit des patrons de multinationales, des banquiers, des milliardaires, de puissants responsables politiques et des intellectuels influents du monde entier. Lors de l'édition 2020, sur 3 000 participants, 
+            près de la moitié arrivent avec des jets privés.  </li>
+                <li><strong>Organisation mondiale du commerce : </strong>s'occupe des règles régissant le commerce international entre les pays.</li>
+                <li><strong>Secret bancaire suisse : </strong>fait l'objet de controverses régulières et a joué un rôle important dans la politique de la Suisse au xxe siècle.  </li>
+                <li><strong>Swiss Market Index (SMI®) : </strong>premier indice boursier suisse. Il est composé de 20 titres parmi les plus importants et les plus 
+                    liquides du Swiss Performance Index (SPI).</li>
+                <li><strong>SIX Swiss Exchange : </strong> entreprise financière suisse basée à Zurich, elle gère la Bourse nationale</li>
+            </ul>        
+        </li>
+        </li>
+
+      </ol>
+
+
+
+
+    </div>
+</main>
+
+
+    <!-- Footer | Pied de page -->  
+    <footer class="py-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Art et Education</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="art.html" class="nav-link p-0 text-muted">Art</a></li>
+              <li class="nav-item mb-2"><a href="education.html" class="nav-link p-0 text-muted">Education</a></li>
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire </a></li>              
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Culture et Histoire</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire</a></li>
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="geographie.html" class="nav-link p-0 text-muted">Geographie</a></li>
+              <li class="nav-item mb-2"><a href="economie.html" class="nav-link p-0 text-muted">Economie</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Nos services</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="usercompte.php" class="nav-link p-0 text-muted">Compte utilisateur</a></li>              
+              <li class="nav-item mb-2"><a href="apropos.html" class="nav-link p-0 text-muted">About | A propos</a></li>
+              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted">Home | Accueil</a></li>        
+              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQs</a></li>                    
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>S'abonner à notre lettre d'information</h5>
+              <p>Un bulletin d'information mensuel sur les nouveautés et les événements les plus excitants.</p>
+
+              <!-- 
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>              
+              --> 
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label> <!-- Email address -->
+                <input id="newsletter1" type="text" class="form-control" placeholder="Adresse e-mail">
+                <button class="btn btn-primary" type="button">S'abonner</button><!-- Subscribe-->
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>
+              &copy;
+              <script type="text/javascript"> document.write(new Date().getFullYear());</script> 
+              HBaytar, Inc. All rights reserved. 
+            </p>
+
+            <!-- Social Media Icons in Footer -->  
+            <div id="social-buttons">
+              <a href="#" rel="me"><img title="Portail Suisse bei Facebook" src="../img/footer/footfacebook.png" alt="Facebook Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Skype" src="../img/footer/footskype.png" alt="Skype Button"/></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Flickr" src="../img/footer/footflickr.png" alt="Flickr Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Google" src="../img/footer/footgoogle.png" alt="Google Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Reddit" src="../img/footer/footreddit.png" alt="Reddit Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Twitter" src="../img/footer/foottwitter.png" alt="Twitter Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei WhatsApp" src="../img/footer/footwhatsapp.png" alt="WhatsApp Button" /></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+
+
+        <!-- Import script(s) | Importation de script(s)-->  
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+  
+    </body>
+</html>
+
+
+ <!--  
+    SCRIPT JAVASCRIPT  
+    Placez les les balises de SCRIPT JS avant la fin de corps </body>
+
+
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    SCRIPT JQuery 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  -->
+  

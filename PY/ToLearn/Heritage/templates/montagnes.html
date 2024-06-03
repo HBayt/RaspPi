@@ -1,0 +1,240 @@
+{% extends "navs.html" %} 
+{% block content %}
+   <!-- ---------------------------------------------------------------------------
+      CAROUSEL 
+    --------------------------------------------------------------------------------- --> 
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" > <!-- data-interval="2000" -->
+
+    <!-- Carousel - Buttons -->  
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Carousel content -->      
+    <div class="carousel-inner">
+      
+
+      <!-- First slide of the carousel.-->      
+      <div class="carousel-item active">
+
+        <!-- First Pciture -->   
+        
+        <img src="{{url_for('static', filename='img/montagnes/monterosa-summit.jpg')}}" class="img-fluid">
+
+
+        <div class="container">
+          <!-- Headline/Content for the first slide of the carousel.-->          
+          <div class="carousel-caption text-start">
+            <h1>Les 7 plus hautes montagnes de Suisse</h1>   
+            <h3>Les 7 points culminants de la Suisse</h3>
+            <!-- First button -->
+            <p><a class="btn btn-lg btn-primary" href="https://www.redbull.com/ch-fr/les-plus-hautes-montagnes-suisse">En savoir plus</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel - Second slide-->   
+      <div class="carousel-item">
+        <img src="{{url_for('static', filename='img/montagnes/GrindelwaldBE-EigerMoenchJungfrau.webp')}}" class="feaurette-image img-fluid mx-auto">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Montagnes & Glaciers</h1>
+            <h3>Les meilleures attractions</h3>
+            <p><a class="btn btn-lg btn-primary" href="https://www.myswitzerland.com/fr-ch/destinations/nature/montagnes/">En savoir plus</a></p>
+          </div>
+        </div>
+      </div>    
+      <!-- Carousel - Third slide-->   
+      <div class="carousel-item">
+        <img src="{{url_for('static', filename='img/montagnes/lacs-suisse.webp')}}" class="feaurette-image img-fluid mx-auto">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Lacs et cours d’eau</h1>
+            <h3>Lacs de montagne</h3>
+            <p><a class="btn btn-lg btn-primary" href="https://fr.wikipedia.org/wiki/Portail:Lacs_et_cours_d%27eau">En savoir plus</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel - Fourth slide--> 
+      <div class="carousel-item">
+        <img src="{{url_for('static', filename='img/montagnes/jura.jpg')}}" class="feaurette-image img-fluid mx-auto">
+
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>La chaine de montagneuse du Jura</h1>
+            <h3>Perspective européenne de la culture et histoire suisse</h3>
+            <p><a class="btn btn-lg btn-primary" href="https://www.swiss-spectator.ch/fr/de-geheimen-van-de-jura/">En savoir plus</a></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!--Carousel  Nav-Button (Previous/Next )-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div><!-- END Carousel -->
+
+   <!-- ---------------------------------------------------------------------------
+      MARKETING MESSAGING (1 ROW/3 COLUMNS)
+    --------------------------------------------------------------------------------- -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+
+      <!-- FIRST col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="https://www.redbull.com/ch-fr/les-plus-hautes-montagnes-suisse" ><img src="{{url_for('static', filename='img/montagnes/monterosa-summit.jpg')}}"  alt="HTML tutorial" class="bd-placeholder-img rounded-circle" width="140" height="140" ></a>
+        
+        <h2>Les Alpes suisses</h2>
+
+        <p>
+          Les massifs alpins recouvrent 60 % de ce beau pays qu’est la Suisse. Les Alpes suisses s’étirent du lac Léman jusqu’à la frontière autrichienne. 
+          De nombreux glaciers et 48 sommets dépassant les 4000 mètres d’altitude, et le pic le plus haut est la pointe Dufour, culminant à 4634 mètres. 
+          Ce relief escarpé accueille de nombreuses forêts et une multitude de lacs créant ainsi des paysages de toute beauté.</p>
+
+        <p><a class="btn btn-secondary" href="https://fr.wikipedia.org/wiki/Alpes_suisses">Voir détails &raquo;</a></p>
+      </div><!-- END /.col-lg-4 -->
+
+      <!-- SECOND col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="https://fr.wikipedia.org/wiki/Davos" >
+            <!--- IMAGE -->
+            <img src="{{url_for('static', filename='img/montagnes/davos-flag.png')}}" 
+          alt="HTML tutorial" class="bd-placeholder-img rounded-circle" width="140" height="140" >
+        </a>
+        <h2>Davos</h2>
+        <p>La ville de Davos est célèbre pour accueillir chaque année le Forum économique mondial (World Economic Forum), une réunion des dirigeants de la planète et des élites économiques mondiales.
+        <br>
+          Davos est aussi connue en tant que station de sports d'hiver, et organise des événements tels que la Coupe Spengler en hockey sur glace, à laquelle l'équipe locale, le HC Davos participe.</p>
+        <p><a class="btn btn-secondary" href="https://fr.wikipedia.org/wiki/Davos">Voir détails &raquo;</a></p>
+      </div><!-- END /.col-lg-4 -->
+
+      <!-- THIRD col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="https://fr.wikipedia.org/wiki/Glacier_d%27Aletsch" ><img 
+          src="{{url_for('static', filename='img/montagnes/GlacierAletschgletscher-Eggishorn.jpg')}}"  
+          alt="HTML tutorial" class="bd-placeholder-img rounded-circle" width="140" height="140" ></a>
+       
+
+
+        <h2>Les glaciers suisses</h2>
+        <p>
+          La plupart des glaciers suisses se trouvent dans les Alpes valaisannes, les Alpes grisonnes et l’Oberland bernois. 
+          Le plus grand glacier des Alpes et de la Suisse est le <a href="https://fr.wikipedia.org/wiki/Glacier_d%27Aletsch" >glacier d’Aletsch</a> et classé au patrimoine mondial de l’UNESCO. 
+          Situé dans le canton du Valais (Sud de la Suisse), il est entouré au nord par le massif de la Jungfrau, au sud par la vallée du Rhône, à l'est par le lac Märjelen et à l'ouest par l'Aletschhorn.
+        </p>
+
+        <p><a class="btn btn-secondary" href="https://www.myswitzerland.com/fr-ch/destinations/nature/montagnes/glaciers/">Voir détails &raquo;</a></p>
+      </div><!-- END /.col-lg-4 -->
+
+    </div><!-- /.row -->
+
+
+
+    <!-- ---------------------------------------------------------------------------
+      START THE FEATURETTES  3X (1 ROW / 2 COLUMNS)
+    --------------------------------------------------------------------------------- -->
+
+    <hr class="featurette-divider">
+
+    <!-- FIRST FEATURETTES ROW-->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Le glacier d'Alertsch</h2>
+        <h2><span class="text-muted">Incroyablement grand, incroyablement beau</span></h2>
+        <p class="lead"> 
+          La région d'Aletsch et son glacier figurent au patrimoine mondial de l'Unesco avec ses incroyables 11 milliards de tonnes de glace.  
+          Les masses de glace s’étirent le long des flancs nord de l’Eiger, du Mönch et de la Jungfrau en direction du Valais, leurs eaux de fonte s’écoulant dans le Rhône par la gorge de la Massa.    
+        </p>
+      </div>
+      <div class="col-md-5">
+
+
+
+          <a href="https://www.myswitzerland.com/fr-ch/destinations/aletsch-joyau-naturel-et-plus-grand-glacier-des-alpes/" >
+            <img 
+            src="{{url_for('static', filename='img/montagnes/AletschArena.jpg')}}" 
+            alt="HTML tutorial" 
+            class="feaurette-image img-fluid mx-auto">
+          </a>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- SECOND FEATURETTES ROW-->
+    <div class="row featurette">
+
+      <div class="col-md-7 order-md-2">  
+        
+      <h2 class="featurette-heading">La pointe Dufour (Dufourspitze)</h2>
+      <h2><span class="text-muted">Incroyablement culminante, 4'634 m</span></h2>
+      <p class="lead"> 
+        La Pointe Dufour est le plus haut sommet de Suisse et l’un des dix principaux sommets du massif du Mont Rose. 
+        Elle fait concurrence au Dom, la plus haute montagne entièrement située sur territoire suisse. 
+      </p>
+    </div>
+
+      <div class="col-md-5 order-md-1">
+        <a href="https://www.zermatt.ch/fr/Media/Attractions/Pointe-Dufour" >
+
+
+          <!--- IMAGE -->
+          <img 
+            src="{{url_for('static', filename='img/montagnes/pointeDufour.jpg')}}" 
+            alt="HTML tutorial" 
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            width="500" height="500" 
+          ></a>
+      
+      </div>
+    </div><!-- END /.FEATURETTES-->
+
+    <hr class="featurette-divider">
+    <!-- THIRD FEATURETTES ROW-->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Chemins de fer et téléphériques</h2>
+      <h2> <span class="text-muted">Excursions en montagne</span></h2>
+        <p class="lead">
+          Les Alpes majestueuses suisses, sont un lieu de prédilection pour les excursions en montagne. 
+          On y trouve des pics enneigés et de npmbreux sentiers pédestres. 
+          Le trajet vers le sommet est toujours une attraction, qu’il se fasse à bord d’un train à crémaillère, 
+          d’un téléphérique ou du funiculaire le plus raide au monde.       
+        </p>
+      </div>
+      <div class="col-md-5">
+        <a href="https://www.myswitzerland.com/fr-ch/decouvrir/voyages-thematiques/remontees-mecaniques/" >
+          <!--- IMAGE -->
+          <img  
+            src="{{url_for('static', filename='img/montagnes/les_diablerets.webp')}}"  
+            alt="HTML tutorial" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            width="500" height="500" ></a>   
+      </div>
+    </div><!-- END /.FEATURETTES-->
+
+    <hr class="featurette-divider">
+
+
+  </div><!-- END /.container MARKETING -->
+
+{% endblock %} 
+

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Comments -->  
+
+    <meta charset="UTF-8">
+	
+    <meta name="description" content="Education Suisse">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="H. BAYTAR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- Title | Titre -->      
+    <title>Education</title>
+	
+
+
+      <!-- Bootstrap core CSS -->  
+      <!--    
+            1ier point = Dossier (Path) courant; 
+            2ième point = Dossier (Path) parent; 
+      -->
+      <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">   
+
+
+      <!-- Pointe vers le dossier 'navbars' et son contenu  -->  
+      <!--  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/"> -->  
+        
+
+
+      <!--  Test dans le navigateur web (Chrome, Firefox, etc.)
+        <script> let d = new Date(); alert("Today's date is " + d); </script>-->
+
+      <!--  Test dans la console du navigateur web (Chrome, Firefox, etc.)
+        <script> console.log("This is my script / Ceci est mon premier script") </script> -->
+
+
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+    
+    
+          /* Add Image logo to navbar   */
+          .logo-image{
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-top: -6px;
+          }
+    
+          /* Add social-buttons (google+, facebook, twitter, etc.)  */
+          #social-buttons {
+            float: right;
+            position: relative;
+            top: -9px;
+          }
+    
+    
+        </style>
+
+    
+    <!-- Custom styles for this template 
+    <link href="navbar.css" rel="stylesheet">-->
+  </head>
+  <body>
+
+      <!-- -------------------------------------------------------------------
+          NAVBAR - BARRE DE NAVIGATION 
+          ------------------------------------------------------------------- --> 
+          <header>
+            <!-- Navbar | Barre de navigation -->  
+            <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+              <div class="container-fluid">
+      
+                <!-- add Logo to Navbar --> 
+                <!-- Navbar button  -->  
+                <a class="navbar-brand" href="index.php"><!--  <a  href="/">  ==  http://localhost/dashboard/ --> 
+                  <div class="logo-image">
+                    <img src="../img/logo-drapeau.ico" class="img-fluid">
+                  </div>
+                </a>
+      
+                <!-- Navbar button| allways displayed button -->
+                <a class="navbar-brand" href="#">Portail Suisse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#id_sitenavbar" aria-controls="id_sitenavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <!-- nav-items (nav-links) -->  
+                <div class="collapse navbar-collapse" id="id_sitenavbar">
+                  <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                    </li>
+                    
+                    <!-- dropdown submenu 1 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Boîte à outils</a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="culture.html">Culture</a></li>
+                        <li><a class="dropdown-item" href="histoire.html">Histoire</a></li>
+                        <li><a class="dropdown-item" href="art.html">Art</a></li>
+                        <li><a class="dropdown-item" href="economie.html">Economie</a></li>
+                        <li><a class="dropdown-item" href="education.html">Education</a></li>
+                        <li><a class="dropdown-item" href="geographie.html">Geographie</a></li>        
+            
+                      </ul>
+                    </li>
+      
+                    <li class="nav-item">
+                      <a class="nav-link" href="montagnes.html">Montagnes</a>
+                    </li>
+      
+                    <!-- dropdown submenu 2 -->  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="id_dropdown-ch" data-bs-toggle="dropdown" aria-expanded="false">Help | Aide </a>
+                      <ul class="dropdown-menu" aria-labelledby="id_dropdown-ch">
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>    
+                        <li><a class="dropdown-item disabled" href="administration.html" tabindex="-1" aria-disabled="true">Administration</a></li>                    
+      
+                      </ul>
+                    </li>
+      
+                  </ul>
+      
+                  <!-- Search bar | Barre de recherche -->  
+                  <form>
+                    <input class="form-control" type="text" placeholder="Search | Rechercher" aria-label="Search">
+                  </form>
+      
+      
+      
+                </div><!-- Comments -->  
+              </div>
+            </nav>
+      
+          </header>
+      
+      <!-- Page content | Contenu du coprs de la page-->  
+      <main>
+        <div class="container-xl mb-6">
+            <!-- Titles | Titres -->
+            <p>
+                <h1> Bienvenue ! - Grüezi ! - Benvenuti ! - Bainvegni !</h1>    
+                <h2>Education en Suisse</h2> 
+            </p>
+
+            <p>
+                La Confédération suisse et les cantons se répartissent les compétences dans le domaine de l'enseignement. 
+                Les cantons jouissent d'une grande autonomie qui varie toutefois selon le type d'institution et le niveau d'étude. 
+                Le domaine des Écoles polytechniques fédérales relève de la compétence de la Confédération qui légifère sur la formation professionnelle supérieure, de même qu'elle encourage la recherche.
+            </p>
+<p>
+    <ol>
+        <li> <strong>Etudes supérieures en Suisse</strong> : également appelées degré tertiaire de l'éducation. L'offre de formation à ce niveau en Suisse est très importante. Elle se divise principalement en deux domaines, celui des hautes écoles (universitaires ou non) et celui de la formation professionnelle supérieure.
+            <ul>
+                <li>Le domaine des <strong>hautes écoles </strong>comprend les hautes écoles universitaires (universités cantonales et écoles polytechniques fédérales) ainsi que les hautes écoles spécialisées.</li>
+                <li>Le domaine de la <strong>formation professionnelle</strong> supérieure est constitué par les écoles supérieures et par toutes les autres formations de degré tertiaire préparant au brevet fédéral ou au diplôme fédéral. La formation professionnelle supérieure se caractérise par une offre large et diversifiée d'institutions privées.</li>
+
+                </ul>
+
+            </ul>
+        </li>
+
+        <li> <strong>Enseignement secondaire : </strong>        
+            <ul>
+                <li><strong>Degré secondaire I : </strong> il fait suite au degré primaire et généralement pour une durée de 3 ans. Avec lui s'achève l'obligation scolaire, à l'exception du canton de Genève où la formation est obligatoire jusqu'à 18 ans révolus depuis 2015.</li>
+                <li><strong>Formation professionnelle initiale (apprentissage) : </strong>permet l'obtention d'un certificat fédéral de capacité (CFC) ou d'une attestation de formation professionnelle.</li>          
+                <li><strong>Degré secondaire II : </strong> constitue la première phase de la scolarité post-obligatoire, à l'exception du canton de Genève. 
+                 il comprend la maturité (gymnasiale, professionnele, spécialisée) école supérieure de commerce, le collège/ le lycée et la passerelle (Dubs). La passerelle permet de complèter la maturité professionnelle/ spécialisée afin de s'inscrire à l'université.</li>
+                <li><strong>École de culture générale : </strong> peut être suivie après une maturité spécialisée pour aller dans une HES. </li>
+            </ul>
+        </li>
+        <li><strong>Recherche : </strong> 
+            <ul>
+                <li><strong><a href="https://fr.wikipedia.org/wiki/Liste_des_Suisses_laur%C3%A9ats_du_prix_Nobel">Suisses lauréats du prix Nobel</a>: </strong> 
+                    le Prix Nobel est une récompense décernée chaque année par la fondation Nobel. Il distingue des figures scientifiques éminentes ayant rendu de grands services à l'humanité par une œuvre et des travaux considérés comme une exceptionnelle contribution. 
+                </li>
+                <li><strong>Académies suisses des sciences : </strong>
+                    organisation suisse basée à Berne, regroupant les quatre académies scientifiques suisses, 
+                    ainsi que le centre de compétences TA-SWISS, la Fondation Science et Cité et d'autres réseaux scientifiques. 
+                    Elles mettent en réseaux les sciences à un niveau régional, national et international.
+                </li>
+                <li><strong>Centre suisse d'électronique et de microtechnique (CSEM): </strong> 
+                    Le CSEM est un centre de recherche et développement basé en Suisse, actif dans la micro-fabrication de précision, la numérisation et l'énergie durable. 
+                    Le CSEM est une courroie de transmission entre les mondes académiques et industriels. 
+                    C’est une usine à idées, un pôle d’excellence technologique, un vecteur de soutien à l’innovation et un accélérateur de la transformation numérique, au service des entreprises. 
+                    Le siège social de l'organisation est situé à Neuchâtel en Suisse.
+                </li>
+                <li><strong>Institut suisse de recherche expérimentale sur le cancer </strong></li>
+                <li><strong>Large Hadron Collider </strong> 
+                    Le Grand collisionneur de hadrons (en anglais : Large Hadron Collider — LHC) est un accélérateur de particules mis en fonction en 2008 au CERN et situé dans la région frontalière entre la France et la Suisse, entre la périphérie nord-ouest de Genève et le pays de Gex (France). C'est l'accélérateur de particules le plus puissant construit à ce jour, a fortiori depuis son amélioration achevée en 2015 après deux ans de mise à l'arrêt. 
+                    Il est même présenté comme le plus grand dispositif expérimental jamais construit pour valider des théories physiques 
+                    Note 1. En 2012, il confirme l'existence du boson de Higgs. Les physiciens espèrent apporter des éléments de réponse à plusieurs questions concernant la physique des particules et la cosmologie à l'aide de ces détecteurs
+                </li>
+                <li><strong>Organisation européenne pour la recherche nucléaire (CERN): </strong> 
+                    Institut de recherche nucléaire et couramment désignée sous l'acronyme CERN ou Cern, le CERN est le plus grand centre de physique des particules du monde.
+                    Il se situe à quelques kilomètres de Genève, en Suisse, à cheval sur la frontière franco-suisse. 
+                </li>
+                <li><strong>Solar Impulse : </strong>Solar Impulse est un avion solaire. C'est le premier avion à avoir effectué un tour du monde sans carburant ni émission polluante pendant le vol. </li>
+                <li>
+                    <strong>Tokamak : </strong>
+                    Un tokamak est un dispositif de confinement magnétique expérimental explorant la physique des plasmas et les possibilités de produire de l'énergie par fusion nucléaire. Il existe deux types de tokamaks aux caractéristiques sensiblement différentes, les tokamaks traditionnels toriques (objet de cet article) et les tokamaks sphériques.
+                    C'est une technologie candidate au développement d'une centrale de production d'électricité par fusion nucléaire fonctionnant selon le principe d'un échange de chaleur avec un fluide. Il convient néanmoins dans un premier temps de démontrer avec ITER que l'énergie produite par les réactions de fusion reste supérieure à l'énergie consommée pour maintenir le plasma en conditions (de réaliser ces réactions de fusion).
+
+                </li>
+            </ul>
+        </li>
+        <li> <strong>Divers </strong>
+            <ul>
+                <li><strong>École privée en Suisse : </strong> Institut Le Rosey, Ecole Lémania, Ecole Moser, Institut de hautes études de Glion, Institut Monte-Rosa, Polycom Lausanne, Villa Saint-Jeant, Collège alpin Beau Soleil, etc.  </li>
+                <li><strong>Enseignement de la musique en Suisse : </strong>
+                    L'enseignement de la musique est délivré généralement dans une Haute école de musique (HÉM) ou dans un conservatoire (Genève, Lausanne, Neuchâtel, Sion, Fribourg, Delémont, Berne).
+                    La durée des études est de 5 ans en moyenne (Licence (3 ans) et Master (2 ans supplémentaires)).                  
+                </li>
+                <li><strong>HarmoS : </strong>Le concordat définit de façon unitaire l'âge de début de la scolarité (quatre ans révolus au 31 juillet), la durée de l'école (onze ans, dont deux ans d’école enfantine) et la durée des degrés scolaires. Il identifie par ailleurs les finalités de l'école suisse au niveau de la scolarité obligatoire, dépeint les instruments qui permettent d'assurer et de développer la qualité du système d’éducation à l'échelon national et désigne les standards nationaux de formation à caractère contraignant.</li>
+                <li><strong>Village d'enfants Pestalozzi : </strong> village d’enfants nommé d’après le pédagogue Johann Heinrich Pestalozzi et situé à Trogen, Appenzell Rhodes-Extérieures, Suisse et à Wahlwies près de Stockach.
+                    Il fut créé en 1945 pour les enfants victimes de la guerre. La commune de Trogen mit un terrain à disposition à cet effet.
+                    Le village accueillit, dès les premiers mois de 1960, des enfants tibétains encadrés par un couple de Tibétains, parents de substitution.
+                </li>
+            </ul>
+        </li>
+        <li><a href="https://fr.wikipedia.org/wiki/Portail:Suisse">Portail Suisse (fr.Wikipédia.org)</a></li>
+
+      </ol>
+    </p>
+
+
+</div>
+</main>
+
+
+    <!-- Footer | Pied de page -->  
+    <footer class="py-5">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Art et Education</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="art.html" class="nav-link p-0 text-muted">Art</a></li>
+              <li class="nav-item mb-2"><a href="education.html" class="nav-link p-0 text-muted">Education</a></li>
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire </a></li>              
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Culture et Histoire</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="histoire.html" class="nav-link p-0 text-muted">Histoire</a></li>
+              <li class="nav-item mb-2"><a href="culture.html" class="nav-link p-0 text-muted">Culture</a></li>
+              <li class="nav-item mb-2"><a href="geographie.html" class="nav-link p-0 text-muted">Geographie</a></li>
+              <li class="nav-item mb-2"><a href="economie.html" class="nav-link p-0 text-muted">Economie</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Nos services</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="usercompte.php" class="nav-link p-0 text-muted">Compte utilisateur</a></li>              
+              <li class="nav-item mb-2"><a href="apropos.html" class="nav-link p-0 text-muted">About | A propos</a></li>
+              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted">Home | Accueil</a></li>        
+              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQs</a></li>                    
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>S'abonner à notre lettre d'information</h5>
+              <p>Un bulletin d'information mensuel sur les nouveautés et les événements les plus excitants.</p>
+
+              <!-- 
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>              
+              --> 
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label> <!-- Email address -->
+                <input id="newsletter1" type="text" class="form-control" placeholder="Adresse e-mail">
+                <button class="btn btn-primary" type="button">S'abonner</button><!-- Subscribe-->
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>
+              &copy;
+              <script type="text/javascript"> document.write(new Date().getFullYear());</script> 
+              HBaytar, Inc. All rights reserved. 
+            </p>
+
+            <!-- Social Media Icons in Footer -->  
+            <div id="social-buttons">
+              <a href="#" rel="me"><img title="Portail Suisse bei Facebook" src="../img/footer/footfacebook.png" alt="Facebook Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Skype" src="../img/footer/footskype.png" alt="Skype Button"/></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Flickr" src="../img/footer/footflickr.png" alt="Flickr Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Google" src="../img/footer/footgoogle.png" alt="Google Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Reddit" src="../img/footer/footreddit.png" alt="Reddit Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei Twitter" src="../img/footer/foottwitter.png" alt="Twitter Button" /></a>
+              <a href="#" rel="me"><img title="Portail Suisse bei WhatsApp" src="../img/footer/footwhatsapp.png" alt="WhatsApp Button" /></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+
+        <!-- Import script(s) | Importation de script(s)-->  
+        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+  
+    </body>
+</html>
+
+
+ <!--  
+    SCRIPT JAVASCRIPT  
+    Placez les les balises de SCRIPT JS avant la fin de corps </body>
+
+
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    SCRIPT JQuery 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  -->
+  

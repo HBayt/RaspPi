@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <meta name="author" content="H. BAYTAR">
+
+    <!-- Title | Titre -->      
+    <title>Framwork | Cadriciel Flask</title>
+
+
+
+<!-- Comments -->  
+
+  </head>
+  <body>
+      <!-- -------------------------------------------------------------------
+          NAVBAR - BARRE DE NAVIGATION 
+          ------------------------------------------------------------------- --> 
+          <header>
+        
+            <!-- Titles | Titres -->
+           <p>  
+             <h1>Python&Flask | Formulaire </h1> 
+           </p>
+   
+       </header>
+    <!-- -------------------------------------------------------------------
+    PAGE CONTENT | CONTENU DU CORPS DE LA PAGE 
+    ------------------------------------------------------------------- --> 
+<main>
+
+    <div class="container-xl mb-6">
+        <h3>Formulaire d'inscription</h3>
+
+        <!-- FORMULAIRE --> 
+        <form action="/action_page.php" id="id_usrform" method="GET"> 
+
+             <!-- Champs de type 'TEXT' --> 
+            <label for="id_fname">First name:</label><br>
+            <input type="text" id="id_fname" name="fname"><br>
+
+            <label for="id_lname">Last name:</label><br>
+            <input type="text" id="id_lname" name="lname"><br><br>
+
+             <!-- CHAMP DE TYPE 'RADIO' (un seul choix possible -> name=Same) --> 
+            <h3>Préférence</h3> 
+            <p>Choose your favorite chocolat</p>
+            <input type="radio" id="id_black" name="favorit_language" value="HTML">
+            <label for="id_black">Black</label><br>
+            <input type="radio" id="id_white" name="favorit_language" value="CSS">
+            <label for="id_white">White</label><br>
+            <br><br>
+
+             <!-- CHAMP DE TYPE 'CHOIX-MULTIPLE' --> 
+            <h3>Moyen(s) de transport)</h3> 
+            <p>Choos your vehicle(s) </p>
+            <input type="checkbox" id="id_vehicle1" name="vehicle1" value="Bike">
+            <label for="id_vehicle1"> I have a bike</label><br>
+
+            <input type="checkbox" id="id_vehicle2" name="vehicle2" value="Car">
+            <label for="id_vehicle2"> I have a car</label><br>
+            
+            <input type="checkbox" id="id_vehicle3" name="vehicle3" value="Boat">
+            <label for="id_vehicle3"> I have a boat</label>
+
+
+             <!-- CHAMP DE TYPE 'LISTE DEROULANTE'  --> 
+            <h3>Animal préféré</h3>            
+            <label for="id_pet-select">Choose a pet:</label>
+
+            <select name="favorit_pet" id="id_pet-select">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+                <option value="goldfish">Goldfish</option>
+            </select>
+
+
+
+            <!-- CHAMPS DE TYPE 'LIGNES-MULITPLES' --> 
+            <h3>Commentaires</h3>
+            <textarea rows="6" cols="60" name="commentaire"  id="id_commentaire" form="id_usrform"> Enter text here...</textarea>
+
+             <!-- CHAMP DE TYPE 'MAIL' --> 
+            <h3>E-mail</h3> 
+            <label for="email">Enter your 'yourname@example.com' email:</label>
+            <input type="email" id="id_email" pattern=".+@example\.com" size="30" required />
+            <br><br>
+
+             <!-- CHAMP DE TYPE 'MOT DE PASSE' --> 
+             <div>
+                <label for="pass">Password (8 characters minimum):</label>
+                <input type="password" id="id_password" name="password" minlength="8" required />
+            </div>            
+
+             <!-- CHAMP/ BOUTON DE TYPE 'SOUMETTRE' --> 
+           <input type="submit" value="Enoyer le formulaire">
+              <!-- <button ....  --> 
+        </form>
+
+        <!--
+            ENVOI 
+            http://127.0.0.1:8080/action_page.php?fname=Marie&lname=Dupont&fav_language=HTML&vehicle2=Car&pets=hamster&comment=No+Comment+&password=12345678
+
+             fname=Marie
+             lname=Dupont
+             fav_language=HTML
+             vehicle2=Car
+             favorit_pet=hamster
+             comment=No+Comment+
+             password=12345678
+
+        -->
+
+
+        <!-- Paragraphe 2 --> 
+        <p> 
+           <!-- Content 2--> 
+        </p>
+
+    </div>
+</main>
+</body>
+</html>
+
+
