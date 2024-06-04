@@ -11,7 +11,8 @@ from db_eleves import (
 from db_authentifications import (
     insert_authentification,
     select_one_authentification,
-    select_many_authentifications,
+    select_many_authentifications, 
+    select_oneby_mail, 
 )
 
 app = Flask(__name__)
@@ -120,14 +121,16 @@ def login():
                 "Donnees POST : ", donnees
             )  # TEST DU DONNES DES FORMULAIRE (REQUEST get)
             # print("mail: ", post_mail, "mdp : ", post_mdp, "bt_radio_value : ", post_action) # AFFICHE VALEURS SAISIES DANS FORMULAIRE
-
+            
+                 
             # IF Utilisateur Veut s'authentifier (login.html / Connexion)
             if str(post_action) == str("val_authentification"):
-                # Chercher l'utilisateur dans BDD
-                utilisateur = select_one_authentification(post_mail, post_mdp)
-                # print("User to authenticate : ", utilisateur) # User to authenticate :  [('teacher@ecole.ch', 'teacher', 'TEACHER')]
-
-                # ELSE Utilisateur pas trouvé
+                
+                # Chercher l'utilisateur dans BDD            
+                utilisateur = select_one_authentification(post_mail, post_mdp)       
+                #print("User to authenticate : ", utilisateur) # User to authenticate :  [('teacher@ecole.ch', 'teacher', 'TEACHER')]      
+                
+                # Utilisateur pas trouvé
                 if utilisateur == []:
                     # AFFICHER MESSAGE D'ERREUR DANS PAGE login.html
                     msg = "Authentification impossible."
@@ -153,21 +156,25 @@ def login():
 
                     # AFFICHER BOUTON DANS BARRE DE MENUS
                     return render_template(
-                        "index_ch.html"
+                        "index.html"
                     )  # Rediriger USER vers PAGE ACCEUIL
 
             # IF Utilisateur veut s'inscrire (= NEW USER)
 
             if str(post_action) == str("val_inscription"):
+                # Chercher l'utilisateur dans BDD            
+                utilisateur = select_oneby_mail(post_mail)  
+                #print("User to authenticate : ", utilisateur) # User to authenticate :  [('teacher@ecole.ch', 'teacher', 'TEACHER')]       
+                # print("Mail of user  : ", utilisateur[0][0]) # User to authenticate :  [('teacher@ecole.ch', 'teacher', 'TEACHER')]  
+            
 
                 # # Vérifie si l'utilisateur est déjà enregistré >>> Chercher l'utilisateur dans BDD
-                utilisateur = select_one_authentification(post_mail, post_mdp)
-
                 if utilisateur != []:
-                    print("utilisateur : ", utilisateur)
+                    print("utilisateur not null / val_inscription : ", utilisateur ) 
                     msg = "L'utilisateur est déjà enregistré."
                     return render_template("login.html", message=msg)
                 else:
+                    print("utilisateur null / val_inscription : ", utilisateur ) # print("utilisateur : ", utilisateur, "", utilisateur[0][0])
                     # Enregistrer USER dans la BDD
                     user = {"mail": post_mail,
                             "mdp": post_mdp, "role": "NEW USER"}
@@ -190,7 +197,6 @@ def login():
                     )  # Rediriger USER vers PAGE ACCEUIL
 
     return render_template("login.html")
-
 
 # ______________________________________________________
 # ROUTE - LOGOUT
